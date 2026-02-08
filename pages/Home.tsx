@@ -16,7 +16,7 @@ const Home: React.FC = () => {
             <span className="bg-gradient-to-r from-primary via-primary to-berry bg-clip-text text-transparent">Build Without Limits</span> <span className="inline-block animate-pulse"></span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-medium leading-relaxed">
-            Join 4000+ women across 60+ venues in Kerala for a massive learning and building experience. No experience required!
+            Join 6000+ women across 60+ venues in Kerala for a massive learning and building experience. No experience required!
           </p>
         </div>
 

@@ -116,7 +116,7 @@ const About: React.FC = () => {
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="p-6 border-l-2 border-primary bg-primary/5">
-                <div className="text-4xl font-bold">4000+</div>
+                <div className="text-4xl font-bold">6000+</div>
                 <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Women in Tech</div>
               </div>
               <div className="p-6 border-l-2 border-primary bg-primary/5">
