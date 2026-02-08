@@ -8,7 +8,6 @@ import Projects from './pages/Projects';
 import Sponsors from './pages/Sponsors';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -43,7 +42,6 @@ const App: React.FC = () => {
         </main>
 
         <Footer />
-        <ChatBot />
       </div>
     </Router>
   );
