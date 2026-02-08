@@ -35,48 +35,33 @@ const About: React.FC = () => {
 
         {/* Mode Card */}
         <div className="md:col-span-8 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl overflow-hidden relative group hover:border-primary/50 transition-all duration-300">
-          <div className="grid md:grid-cols-2 h-full">
-            <div className="p-8 flex flex-col justify-between z-10">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-primary">
-                  <span className="material-symbols-outlined text-3xl">location_on</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Mode & Venue</h3>
-                <p className="text-slate-400 mb-6">Hosted across 60+ venues in Kerala to provide a safe and inclusive space to innovate.</p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-primary">apartment</span>
-                    <span className="font-medium">60+ Venues across Kerala</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-primary">meeting_room</span>
-                    <span className="font-medium text-slate-500">Offline Participation</span>
-                  </div>
-                </div>
+          <div className="h-full p-8 flex flex-col justify-between z-10">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-primary">
+                <span className="material-symbols-outlined text-3xl">location_on</span>
               </div>
-              <div className="mt-8">
-                <a
-                  className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
-                  href="https://maps.app.goo.gl/34bf71aaecc5a798"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open in Google Maps <span className="material-symbols-outlined">arrow_right_alt</span>
-                </a>
+              <h3 className="text-2xl font-bold mb-2">Mode & Venue</h3>
+              <p className="text-slate-400 mb-6">Hosted across 60+ venues in Kerala to provide a safe and inclusive space to innovate.</p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary">apartment</span>
+                  <span className="font-medium">60+ Venues across Kerala</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary">meeting_room</span>
+                  <span className="font-medium text-slate-500">Offline Participation</span>
+                </div>
               </div>
             </div>
-            <div className="relative h-72 md:h-full overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.0434991904867!2d76.5569874!3d9.0645863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06047ba58e1ba5%3A0x34bf71aaecc5a798!2sCollege%20of%20Engineering%20Karunagappally!5e1!3m2!1sen!2sin!4v1770537557472!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-              ></iframe>
-              <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-transparent to-transparent pointer-events-none"></div>
+            <div className="mt-8">
+              <a
+                className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+                href="https://maps.app.goo.gl/34bf71aaecc5a798"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Google Maps <span className="material-symbols-outlined">arrow_right_alt</span>
+              </a>
             </div>
           </div>
         </div>
