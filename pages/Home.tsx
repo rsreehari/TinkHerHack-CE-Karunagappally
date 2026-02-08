@@ -43,6 +43,42 @@ const Home: React.FC = () => {
             Registration closes on Feb 15th
           </p>
         </div>
+
+        {/* Past Memories Section */}
+        <div className="w-full pt-16 space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            Past Memories
+          </h2>
+
+          <div className="relative w-full overflow-hidden rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm p-4">
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background-dark to-transparent z-10"></div>
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background-dark to-transparent z-10"></div>
+
+            <div className="flex animate-marquee gap-6">
+              {[
+                "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
+                // Duplicated for seamless loop
+                "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400",
+                "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
+              ].map((src, idx) => (
+                <div key={idx} className="flex-shrink-0 w-64 h-48 rounded-xl overflow-hidden border border-white/10 group">
+                  <img
+                    src={src}
+                    alt={`Memory ${idx + 1}`}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
