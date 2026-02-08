@@ -1,20 +1,69 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+# 🌸 Tink-Her-Hack 4.0
+
+**Build Without Limits**
+
 </div>
 
-# Run and deploy your AI Studio app
+## Overview
 
-This contains everything you need to run your app locally.
+Welcome to the official web portal for **Tink-Her-Hack 4.0**, a hackathon designed to empower and inspire. This project features a modern, responsive design with a "berry" glow aesthetic, a timeline of events, sponsor showcases, and an AI-powered assistant.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1oS55sVtdCECxfJvPJqL-h4M8616hlS89
+## Features
 
-## Run Locally
+-   **✨ Modern UI/UX**: Built with React, Tailwind CSS, and Framer Motion (assumed based on style).
+-   **🤖 AI Chatbot**: Integrated with Google Gemini API to assist participants.
+-   **📱 Responsive Design**: Optimized for both desktop and mobile devices.
+-   **📅 Event Timeline**: Interactive schedule of the hackathon.
+-   **🏆 Project & Sponsor Showcases**: Dedicated sections for highlighting projects and partners.
 
-**Prerequisites:**  Node.js
+## 🚀 Getting Started
 
+Follow these steps to run the project locally.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+-   Node.js (v16 or higher recommended)
+-   npm or yarn
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/rsreehari/TinkHerHack-CE-Karunagappally.git
+    cd TinkHerHack-CE-Karunagappally
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup**
+    -   Create a `.env.local` file in the root directory (if it doesn't exist).
+    -   Add your Gemini API key:
+        ```env
+        GEMINI_API_KEY=your_api_key_here
+        ```
+
+4.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **AI Integration**: [Google Gemini API](https://ai.google.dev/)
+-   **Routing**: [React Router v6/v7](https://reactrouter.com/)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+<p align="center">Made with ❤️ for Tink-Her-Hack 4.0</p>
