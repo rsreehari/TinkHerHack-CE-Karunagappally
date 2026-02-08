@@ -3,14 +3,14 @@ import React from 'react';
 
 const Timeline: React.FC = () => {
   const events = [
-    { time: "08:00 AM (Feb 20)", title: "Arrival & Identification", desc: "Report to your venue. Check-in and get settled.", align: 'top' },
-    { time: "09:30 AM", title: "Opening Ceremony", desc: "Keynote speeches and problem statement release.", align: 'bottom' },
-    { time: "11:00 AM", title: "Hacking Begins", desc: "The clock starts! 18 hours (Overnight) or 9 hours (Day).", align: 'top', active: true },
-    { time: "03:00 PM", title: "Mentor Checkpoint", desc: "Get feedback on your idea and implementation.", align: 'bottom' },
-    { time: "09:00 PM", title: "Dinner & Games", desc: "Recharge with food and fun activities.", align: 'top' },
-    { time: "12:00 AM (Feb 21)", title: "Midnight Code", desc: "The overnight grind continues for 18h participants.", align: 'bottom' },
-    { time: "08:00 AM", title: "Submission Deadline", desc: "Final commits! Upload to GitHub and submit on TinkerHub App.", align: 'top' },
-    { time: "10:00 AM", title: "Judging & Awards", desc: "Present your projects and celebrate the winners!", align: 'bottom', icon: 'emoji_events' }
+    { time: "05:00 PM (Feb 20)", title: "Arrival & Registration", desc: "Venue opens. Check-in and get ready for an overnight sprint.", align: 'top' },
+    { time: "06:00 PM", title: "Opening Ceremony", desc: "Welcome address and problem statement brief.", align: 'bottom' },
+    { time: "07:00 PM", title: "Hacking Begins", desc: "The 18-hour overnight hackathon kicks off!", align: 'top', active: true },
+    { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel with food and get first-round feedback.", align: 'bottom' },
+    { time: "01:00 AM (Feb 21)", title: "Midnight Fun", desc: "Break the ice with games and energy boosters.", align: 'top' },
+    { time: "08:00 AM", title: "Breakfast & Coding", desc: "Morning recharge. Final lap of development.", align: 'bottom' },
+    { time: "01:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit your projects on the app.", align: 'top' },
+    { time: "02:30 PM", title: "Judging & Awards", desc: "Project demos and announcement of winners.", align: 'bottom', icon: 'emoji_events' }
   ];
 
   return (
