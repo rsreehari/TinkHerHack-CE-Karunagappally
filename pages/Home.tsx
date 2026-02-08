@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
             <span className="material-symbols-outlined text-primary text-3xl mb-2">schedule</span>
             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Duration</span>
-            <span className="text-2xl font-bold">18h / 9h</span>
+            <span className="text-2xl font-bold">18h</span>
           </div>
           <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
             <span className="material-symbols-outlined text-primary text-3xl mb-2">calendar_month</span>
