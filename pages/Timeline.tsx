@@ -4,8 +4,8 @@ import React from 'react';
 const Timeline: React.FC = () => {
   const events = [
     { time: "05:00 PM (Feb 20)", title: "Arrival & Registration", desc: "Venue opens. Check-in and get ready for an overnight sprint.", align: 'top' },
-    { time: "06:00 PM", title: "Opening Ceremony", desc: "Welcome address and problem statement brief.", align: 'bottom' },
-    { time: "07:00 PM", title: "Hacking Begins", desc: "The 18-hour overnight hackathon kicks off!", align: 'top', active: true },
+    { time: "05:30 PM", title: "Opening Ceremony", desc: "Welcome address and problem statement brief.", align: 'bottom' },
+    { time: "06:00 PM", title: "Hacking Begins", desc: "The 18-hour overnight hackathon kicks off!", align: 'top', active: true },
     { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel with food and get first-round feedback.", align: 'bottom' },
     { time: "01:00 AM (Feb 21)", title: "Midnight Fun", desc: "Break the ice with games and energy boosters.", align: 'top' },
     { time: "08:00 AM", title: "Breakfast & Coding", desc: "Morning recharge. Final lap of development.", align: 'bottom' },
