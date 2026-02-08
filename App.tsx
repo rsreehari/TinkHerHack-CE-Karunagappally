@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Timeline from './pages/Timeline';
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         </div>
 
         <Navbar />
-        
+
         <main className="flex-grow relative z-10">
           <Routes>
             <Route path="/" element={<Home />} />
