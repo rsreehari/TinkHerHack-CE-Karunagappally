@@ -9,8 +9,8 @@ const Timeline: React.FC = () => {
     { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel with food and get first-round feedback.", align: 'bottom' },
     { time: "01:00 AM (Feb 21)", title: "Midnight Fun", desc: "Break the ice with games and energy boosters.", align: 'top' },
     { time: "08:00 AM", title: "Breakfast & Coding", desc: "Morning recharge. Final lap of development.", align: 'bottom' },
-    { time: "01:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit your projects on the app.", align: 'top' },
-    { time: "02:30 PM", title: "Judging & Awards", desc: "Project demos and announcement of winners.", align: 'bottom', icon: 'emoji_events' }
+    { time: "12:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit your projects on the app.", align: 'top' },
+    { time: "01:00 PM", title: "Judging", desc: "Project demos and announcement of winners.", align: 'bottom', icon: 'emoji_events' }
   ];
 
   return (
