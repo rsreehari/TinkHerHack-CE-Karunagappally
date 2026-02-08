@@ -3,14 +3,14 @@ import React from 'react';
 
 const Timeline: React.FC = () => {
   const events = [
-    { time: "08:00 AM", title: "Arrival & Breakfast", desc: "Registration desk opens. Grab your badges and some fuel for the day.", align: 'top' },
-    { time: "09:30 AM", title: "Opening Ceremony", desc: "Keynote speeches by industry leaders and problem statement release.", align: 'bottom' },
-    { time: "11:00 AM", title: "Hacking Commences", desc: "The 18-hour clock starts ticking. Get those IDEs ready and coffee hot.", align: 'top', active: true },
-    { time: "03:00 PM", title: "Mentor Checkpoint", desc: "Get feedback from experts. Refine your architecture and logic flow.", align: 'bottom' },
-    { time: "09:00 PM", title: "Dinner & Games", desc: "Time to recharge! Networking over dinner followed by fun mini-games.", align: 'top' },
-    { time: "12:00 AM", title: "Midnight Fuel", desc: "The tradition continues! Pizza, energy drinks, and intense coding sessions.", align: 'bottom' },
-    { time: "08:00 AM", title: "Final Submission", desc: "Code freeze. Submit your GitHub repos and prepare the final pitch.", align: 'top' },
-    { time: "11:00 AM", title: "Awards Ceremony", desc: "Celebrating the winners and the amazing projects built in 18 hours.", align: 'bottom', icon: 'emoji_events' }
+    { time: "08:00 AM (Feb 20)", title: "Arrival & Identification", desc: "Report to your venue. Check-in and get settled.", align: 'top' },
+    { time: "09:30 AM", title: "Opening Ceremony", desc: "Keynote speeches and problem statement release.", align: 'bottom' },
+    { time: "11:00 AM", title: "Hacking Begins", desc: "The clock starts! 18 hours (Overnight) or 9 hours (Day).", align: 'top', active: true },
+    { time: "03:00 PM", title: "Mentor Checkpoint", desc: "Get feedback on your idea and implementation.", align: 'bottom' },
+    { time: "09:00 PM", title: "Dinner & Games", desc: "Recharge with food and fun activities.", align: 'top' },
+    { time: "12:00 AM (Feb 21)", title: "Midnight Code", desc: "The overnight grind continues for 18h participants.", align: 'bottom' },
+    { time: "08:00 AM", title: "Submission Deadline", desc: "Final commits! Upload to GitHub and submit on TinkerHub App.", align: 'top' },
+    { time: "10:00 AM", title: "Judging & Awards", desc: "Present your projects and celebrate the winners!", align: 'bottom', icon: 'emoji_events' }
   ];
 
   return (
@@ -34,7 +34,7 @@ const Timeline: React.FC = () => {
             <p className="text-slate-500 text-sm mb-2 uppercase tracking-widest font-bold">Total Duration</p>
             <div className="flex items-center gap-3">
               <span className="text-3xl font-black">18</span>
-              <span className="text-slate-500 text-xs text-left leading-tight uppercase font-bold">Hours of<br/>Code</span>
+              <span className="text-slate-500 text-xs text-left leading-tight uppercase font-bold">Hours of<br />Code</span>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Timeline: React.FC = () => {
         <div className="overflow-x-auto pb-12 cursor-grab active:cursor-grabbing px-[10%] relative">
           <div className="absolute h-1 bg-primary/20 w-[3000px] top-1/2 -translate-y-1/2 z-0"></div>
           <div className="absolute h-1 bg-gradient-to-r from-primary to-purple-500 w-[1200px] top-1/2 -translate-y-1/2 z-0 shadow-[0_0_20px_rgba(249,26,145,0.6)]"></div>
-          
+
           <div className="flex gap-40 relative z-10 pr-64 py-32">
             {events.map((event, idx) => (
               <div key={idx} className="relative flex flex-col items-center min-w-[300px]">
@@ -57,7 +57,7 @@ const Timeline: React.FC = () => {
                     <p className="text-sm text-slate-400 mt-2">{event.desc}</p>
                   </div>
                 )}
-                
+
                 <div className={`size-6 rounded-full border-4 border-background-dark relative ${event.active ? 'bg-white scale-125 animate-pulse' : 'bg-primary'} shadow-[0_0_15px_rgba(249,26,145,0.8)]`}>
                   {event.active && (
                     <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold whitespace-nowrap">YOU ARE HERE</div>

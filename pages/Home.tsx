@@ -9,14 +9,14 @@ const Home: React.FC = () => {
         <div className="space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
             <span className="material-symbols-outlined text-sm">stars</span>
-            Annual Women-Centric Hackathon
+            Kerala's Largest Women-Only Hackathon
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight text-white">
-            Tink-Her-Hack 4.0 – <br/>
+            Tink-Her-Hack 4.0 – <br />
             <span className="bg-gradient-to-r from-primary via-primary to-berry bg-clip-text text-transparent">Build Without Limits</span> <span className="inline-block animate-pulse"></span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-medium leading-relaxed">
-            Join India's most vibrant community of women developers, designers, and innovators for 18 hours of pure creation and problem-solving.
+            Join 4000+ women across 60+ venues in Kerala for a massive learning and building experience. No experience required!
           </p>
         </div>
 
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
             <span className="material-symbols-outlined text-primary text-3xl mb-2">schedule</span>
             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Duration</span>
-            <span className="text-2xl font-bold">18 Hours</span>
+            <span className="text-2xl font-bold">18h / 9h</span>
           </div>
           <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
             <span className="material-symbols-outlined text-primary text-3xl mb-2">calendar_month</span>

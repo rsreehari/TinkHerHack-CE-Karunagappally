@@ -11,7 +11,7 @@ const About: React.FC = () => {
           Empowering Beginners
         </div>
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-          Redefining Tech for <br/>
+          Redefining Tech for <br />
           <span className="bg-gradient-to-r from-primary to-[#ff80bf] bg-clip-text text-transparent">Complete Beginners.</span>
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed">
@@ -28,9 +28,9 @@ const About: React.FC = () => {
               <span className="material-symbols-outlined text-3xl">groups</span>
             </div>
             <h3 className="text-2xl font-bold mb-2">Team Size</h3>
-            <p className="text-slate-400 leading-snug mb-8">Bring your friends or find a squad during our pre-event networking. Maximum 3 per team.</p>
+            <p className="text-slate-400 leading-snug mb-8">Bring a friend or find a partner during our pre-event networking. Register as individuals or teams.</p>
           </div>
-          <div className="text-4xl font-bold text-primary">Solo - 3 <span className="text-base text-slate-500 font-normal">Members</span></div>
+          <div className="text-4xl font-bold text-primary">1 - 2 <span className="text-base text-slate-500 font-normal">Members</span></div>
         </div>
 
         {/* Mode Card */}
@@ -42,23 +42,23 @@ const About: React.FC = () => {
                   <span className="material-symbols-outlined text-3xl">location_on</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Mode & Venue</h3>
-                <p className="text-slate-400 mb-6">Experience 18 hours of pure building at one of the most vibrant tech campuses in the state.</p>
+                <p className="text-slate-400 mb-6">Hosted across 60+ venues in Kerala to provide a safe and inclusive space to innovate.</p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-primary">apartment</span>
-                    <span className="font-medium">CEK Campus, Karunagappally</span>
+                    <span className="font-medium">60+ Venues across Kerala</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-primary">meeting_room</span>
-                    <span className="font-medium text-slate-500">Offline Participation Only</span>
+                    <span className="font-medium text-slate-500">Offline Participation</span>
                   </div>
                 </div>
               </div>
               <div className="mt-8">
-                <a 
-                  className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all" 
-                  href="https://maps.app.goo.gl/34bf71aaecc5a798" 
-                  target="_blank" 
+                <a
+                  className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+                  href="https://maps.app.goo.gl/34bf71aaecc5a798"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Open in Google Maps <span className="material-symbols-outlined">arrow_right_alt</span>
@@ -66,13 +66,13 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="relative h-72 md:h-full overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.0434991904867!2d76.5569874!3d9.0645863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06047ba58e1ba5%3A0x34bf71aaecc5a798!2sCollege%20of%20Engineering%20Karunagappally!5e1!3m2!1sen!2sin!4v1770537557472!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.0434991904867!2d76.5569874!3d9.0645863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06047ba58e1ba5%3A0x34bf71aaecc5a798!2sCollege%20of%20Engineering%20Karunagappally!5e1!3m2!1sen!2sin!4v1770537557472!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
               ></iframe>
@@ -93,9 +93,9 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
                 { title: "No Code Experience?", desc: "We provide dedicated mentors to help you setup and build your first project." },
-            
+
                 { title: "Supportive Environment", desc: "A non-competitive atmosphere focused on learning and community." },
-                
+
               ].map((item, idx) => (
                 <div key={idx} className="space-y-2">
                   <h4 className="font-bold text-white flex items-center gap-2">
@@ -125,14 +125,14 @@ const About: React.FC = () => {
       <section className="py-20 border-t border-white/5">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">Breaking Barriers, <br/> One Line at a Time.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">Breaking Barriers, <br /> One Line at a Time.</h2>
             <p className="text-slate-400 text-lg leading-relaxed">
               Tink-Her-Hack was born from a simple observation: the gender gap in tech isn't about ability, but accessibility. We create a safe space for women and non-binary students to experiment, fail, and succeed together.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="p-6 border-l-2 border-primary bg-primary/5">
-                <div className="text-4xl font-bold">3000+</div>
-                <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Past Participants</div>
+                <div className="text-4xl font-bold">4000+</div>
+                <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Women in Tech</div>
               </div>
               <div className="p-6 border-l-2 border-primary bg-primary/5">
                 <div className="text-4xl font-bold">1188</div>
@@ -142,10 +142,10 @@ const About: React.FC = () => {
           </div>
           <div className="flex-1 relative">
             <div className="aspect-square bg-white/5 border border-white/10 p-4 rotate-3 hover:rotate-0 transition-transform duration-500 rounded-3xl">
-              <img 
-                alt="Women in tech" 
-                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtBYal6PPsuqN4U_mFqWYKGMvqJZzzsWNO38XeRq37_iUzsJ4Jy4FSSsnN08gQ1wlWhg1-vPpFHXYD9HDjjseGU1W0bsa-2MLofJ32PSdQBfaULPloAeCDmyLnNr9tcx23FhvadJVuF1GRHWWclAz--D7IIcG-Zpg3Hw4lnE4lR19QnFWnE6yxkClGEZHUv8nxQrn8ddxVn6V_ZClWgkymYMGRLomeuzlPHp-4vAKd8FAj7KwI2X8eq3XTDbh7Wsu5TAXoa0FVzddv" 
+              <img
+                alt="Women in tech"
+                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtBYal6PPsuqN4U_mFqWYKGMvqJZzzsWNO38XeRq37_iUzsJ4Jy4FSSsnN08gQ1wlWhg1-vPpFHXYD9HDjjseGU1W0bsa-2MLofJ32PSdQBfaULPloAeCDmyLnNr9tcx23FhvadJVuF1GRHWWclAz--D7IIcG-Zpg3Hw4lnE4lR19QnFWnE6yxkClGEZHUv8nxQrn8ddxVn6V_ZClWgkymYMGRLomeuzlPHp-4vAKd8FAj7KwI2X8eq3XTDbh7Wsu5TAXoa0FVzddv"
               />
             </div>
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary opacity-50"></div>
