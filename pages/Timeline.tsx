@@ -101,7 +101,6 @@ const Timeline: React.FC = () => {
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">Registration for Tink-Her-Hack 4.0 is closing soon. Don't miss your chance to be part of South India's largest women-centric hackathon.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <button className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all">Join the Revolution</button>
-            <button className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all">Join the Revolution</button>
             <a
               href="/THH_PPT.pdf"
               download="THH_Guide.pdf"
