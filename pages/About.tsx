@@ -120,7 +120,7 @@ const About: React.FC = () => {
                 <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Women in Tech</div>
               </div>
               <div className="p-6 border-l-2 border-primary bg-primary/5">
-                <div className="text-4xl font-bold">1188</div>
+                <div className="text-4xl font-bold">1800+</div>
                 <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Projects</div>
               </div>
             </div>
