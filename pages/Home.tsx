@@ -20,7 +20,7 @@ const Home: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 max-w-2xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-6 max-w-5xl mx-auto">
           <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
             <span className="material-symbols-outlined text-primary text-3xl mb-2">schedule</span>
             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Duration</span>
@@ -31,6 +31,11 @@ const Home: React.FC = () => {
             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Date</span>
             <span className="text-2xl font-bold">Feb 20, 21</span>
           </div>
+          <a href="https://maps.app.goo.gl/hfzQmCcru8n4RuxY6" target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all hover:bg-white/10">
+            <span className="material-symbols-outlined text-primary text-3xl mb-2">location_on</span>
+            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Venue</span>
+            <span className="text-xl font-bold text-center leading-tight">CE Karunagappally</span>
+          </a>
         </div>
 
         <div className="py-8">
