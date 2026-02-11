@@ -41,11 +41,11 @@ const About: React.FC = () => {
                 <span className="material-symbols-outlined text-3xl">location_on</span>
               </div>
               <h3 className="text-2xl font-bold mb-2">Mode & Venue</h3>
-              <p className="text-slate-400 mb-6">Hosted across 60+ venues in Kerala to provide a safe and inclusive space to innovate.</p>
+              <p className="text-slate-400 mb-6">Hosted at College Of Engineering Karunagappally to provide a safe and inclusive space to innovate.</p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">apartment</span>
-                  <span className="font-medium">60+ Venues across Kerala</span>
+                  <span className="font-medium">College Of Engineering Karunagappally</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">meeting_room</span>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
             <div className="mt-8">
               <a
                 className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
-                href="https://maps.app.goo.gl/34bf71aaecc5a798"
+                href="https://maps.app.goo.gl/hfzQmCcru8n4RuxY6"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -100,9 +100,14 @@ const About: React.FC = () => {
           <div className="text-xl font-bold uppercase tracking-widest text-slate-300">Of Non-Stop Innovation</div>
           <div className="w-16 h-1 bg-primary/30 my-6 rounded-full"></div>
           <p className="text-slate-400 text-sm">Food, caffeine, and endless learning provided.</p>
-          <button className="mt-8 w-full py-5 bg-primary text-white rounded-2xl font-black text-lg shadow-lg hover:translate-y-[-2px] transition-all">
+          <a
+            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 w-full py-5 bg-primary text-white rounded-2xl font-black text-lg shadow-lg hover:translate-y-[-2px] transition-all block"
+          >
             SECURE YOUR SPOT
-          </button>
+          </a>
         </div>
       </section>
 
