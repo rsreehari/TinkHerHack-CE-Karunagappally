@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CountdownTimer from '../components/CountdownTimer';
 
 const Home: React.FC = () => {
   return (
@@ -31,6 +31,10 @@ const Home: React.FC = () => {
             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Date</span>
             <span className="text-2xl font-bold">Feb 20, 21</span>
           </div>
+        </div>
+
+        <div className="py-8">
+          <CountdownTimer />
         </div>
 
         <div className="flex flex-col items-center gap-6 pt-8">
