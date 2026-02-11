@@ -6,13 +6,7 @@ const Footer: React.FC = () => {
     <footer className="w-full max-w-7xl mx-auto px-10 py-12 mt-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 border-t border-white/10 pt-10">
         <div className="flex items-center gap-6">
-          <div className="h-8 w-auto flex items-center gap-2 opacity-60 grayscale hover:grayscale-0 transition-all cursor-pointer">
-            <img
-              alt="TinkerHub CE Karunagappally"
-              className="h-full"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Iz5ohngFq2TVF1ySR0zwcN_8jWlU8VaILZttguyDh-f6ipIHXqOqsP0s60D82HQefMpxHZhLrPgWRWS4Mo99q74U6vKyPpg2twIIsdOT3HHoqS0WG5p4l4gfGZT8f_xGAVvgJAiFpXtrlAArUe0SjMO8FQoIzNuO4pPbodsr6p7amxSIVpNCFPe79VC3hM-1NhrUNK2vaCAXyUb0bL4bBbg9L36xzXgf2d5dLJk-4d6-AY49N0varA0FnpjyyTawgIMX23arwkTU"
-            />
-          </div>
+
         </div>
 
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
@@ -22,20 +16,16 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <a className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary transition-all" href="#">
-            <span className="material-symbols-outlined text-sm">public</span>
-          </a>
-          <a className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-primary transition-all" href="#">
-            <span className="material-symbols-outlined text-sm">alternate_email</span>
-          </a>
+
           <a
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#25D366] transition-all"
+            className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/5 hover:bg-[#25D366] transition-all group"
             href="https://chat.whatsapp.com/E1JqJuyUgHqFjnAb3UPg35"
             target="_blank"
             rel="noopener noreferrer"
             title="Join WhatsApp Group"
           >
-            <span className="material-symbols-outlined text-sm">groups</span>
+            <span className="material-symbols-outlined text-xl group-hover:text-white">groups</span>
+            <span className="font-bold text-sm group-hover:text-white">Join WhatsApp Group</span>
           </a>
         </div>
       </div>

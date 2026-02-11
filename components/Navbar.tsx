@@ -23,9 +23,11 @@ const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-[0_0_15px_rgba(255,20,146,0.5)] group-hover:scale-110 transition-transform">
-            <span className="material-symbols-outlined text-white text-2xl">terminal</span>
-          </div>
+          <img
+            src="/tink-her-hack.png"
+            alt="Tink-Her-Hack 4.0 Logo"
+            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform"
+          />
           <span className="text-xl font-bold tracking-tight text-white">Tink-Her-Hack <span className="text-primary">4.0</span></span>
         </Link>
 
@@ -44,9 +46,14 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]">
+          <a
+            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
+          >
             Register Now
-          </button>
+          </a>
 
           {/* Mobile Toggle */}
           <button
@@ -71,7 +78,14 @@ const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <button className="w-full bg-primary py-3 rounded-lg font-bold">Register Now</button>
+          <a
+            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-primary py-3 rounded-lg font-bold text-center block"
+          >
+            Register Now
+          </a>
         </div>
       )}
     </header>

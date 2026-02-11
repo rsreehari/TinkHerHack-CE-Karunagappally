@@ -38,10 +38,15 @@ const Home: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center gap-6 pt-8">
-          <button className="group relative px-12 py-6 bg-primary text-white text-xl font-bold rounded-2xl transition-all shadow-[0_10px_40px_rgba(255,20,146,0.4)] hover:shadow-[0_15px_50px_rgba(255,20,146,0.6)] hover:-translate-y-1 overflow-hidden">
+          <a
+            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative px-12 py-6 bg-primary text-white text-xl font-bold rounded-2xl transition-all shadow-[0_10px_40px_rgba(255,20,146,0.4)] hover:shadow-[0_15px_50px_rgba(255,20,146,0.6)] hover:-translate-y-1 overflow-hidden inline-block"
+          >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             <span className="relative">Register Now</span>
-          </button>
+          </a>
           <p className="text-sm text-slate-500 flex items-center gap-2">
             <span className="material-symbols-outlined text-sm">info</span>
             Registration closes on Feb 15th

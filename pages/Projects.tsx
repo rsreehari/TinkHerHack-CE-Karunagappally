@@ -51,9 +51,14 @@ const Projects: React.FC = () => {
             <h2 className="text-4xl font-black text-white mb-3">Be part of the next legacy</h2>
             <p className="text-white/80 max-w-lg text-lg">Registration for Tink-Her-Hack 4.0 is opening soon. Join thousands of creators making a difference in the world of technology.</p>
           </div>
-          <button className="bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all hover:-translate-y-1 whitespace-nowrap">
+          <a
+            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all hover:-translate-y-1 whitespace-nowrap block"
+          >
             Register Now
-          </button>
+          </a>
         </div>
       </div>
     </div>
