@@ -72,16 +72,20 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap justify-center md:justify-end gap-3">
-          {/* Social Buttons (Compact) */}
-          <a href="https://www.instagram.com/wit.thceknpy" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#cc2366] transition-all group border border-white/10 hover:border-transparent" title="WiT Instagram">
-            <span className="material-symbols-outlined text-xl group-hover:text-white text-white/80">linked_camera</span>
+          {/* Social Buttons */}
+          <a href="https://www.instagram.com/wit.thceknpy" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#cc2366] transition-all group border border-white/10 hover:border-transparent flex items-center gap-2" title="WiT Instagram">
+            <span className="material-symbols-outlined text-lg group-hover:text-white text-white/80">linked_camera</span>
+            <span className="text-xs font-bold text-white/80 group-hover:text-white">WiT Insta</span>
           </a>
-          <a href="https://whatsapp.com/channel/0029Vb7E3GM3AzNK0fc02o32" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-[#25D366] transition-all group border border-white/10 hover:border-transparent" title="WhatsApp Channel">
-            <span className="material-symbols-outlined text-xl group-hover:text-white text-white/80">campaign</span>
+
+          <a href="https://whatsapp.com/channel/0029Vb7E3GM3AzNK0fc02o32" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white/5 hover:bg-[#25D366] transition-all group border border-white/10 hover:border-transparent flex items-center gap-2" title="WhatsApp Channel">
+            <span className="material-symbols-outlined text-lg group-hover:text-white text-white/80">campaign</span>
+            <span className="text-xs font-bold text-white/80 group-hover:text-white">Channel</span>
           </a>
-          <a href="https://chat.whatsapp.com/E1JqJuyUgHqFjnAb3UPg35" target="_blank" rel="noopener noreferrer" className="px-5 py-3 rounded-full bg-white/5 hover:bg-[#25D366] transition-all group border border-white/10 hover:border-transparent flex items-center gap-2" title="Join Community Group">
-            <span className="material-symbols-outlined text-xl group-hover:text-white text-white/80">groups</span>
-            <span className="text-sm font-bold text-white/80 group-hover:text-white">Join Community</span>
+
+          <a href="https://chat.whatsapp.com/E1JqJuyUgHqFjnAb3UPg35" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded-full bg-white/5 hover:bg-[#25D366] transition-all group border border-white/10 hover:border-transparent flex items-center gap-2" title="Join Community Group">
+            <span className="material-symbols-outlined text-lg group-hover:text-white text-white/80">groups</span>
+            <span className="text-xs font-bold text-white/80 group-hover:text-white">Join Community</span>
           </a>
         </div>
       </div>
