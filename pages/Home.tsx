@@ -150,7 +150,7 @@ const Home: React.FC = () => {
             "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
             "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
           ].map((src, i) => (
-            <div key={i} className="w-[400px] h-[280px] rounded-3xl overflow-hidden border-4 border-white transform rotate-2 hover:rotate-0 transition-all duration-300 hover:scale-105 shadow-2xl shrink-0">
+            <div key={i} className="w-[280px] h-[180px] md:w-[400px] md:h-[280px] rounded-3xl overflow-hidden border-2 md:border-4 border-white transform rotate-2 hover:rotate-0 transition-all duration-300 hover:scale-105 shadow-xl md:shadow-2xl shrink-0">
               <img src={src} className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
