@@ -54,10 +54,10 @@ const Home: React.FC = () => {
                   scale: { duration: 0.5, type: "spring" },
                   default: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute -right-20 -top-16 md:-right-44 md:-top-32 z-50 hidden md:block"
+                className="absolute -right-4 -top-12 md:-right-44 md:-top-32 z-50 block"
               >
-                <div className="bg-white !text-black font-black uppercase text-sm md:text-base px-6 py-3 shadow-[8px_8px_0px_#FF1493] border-4 border-black transform hover:scale-110 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
-                  <span className="material-symbols-outlined text-xl text-primary">verified</span>
+                <div className="bg-white !text-black font-black uppercase text-[10px] md:text-base px-3 py-1.5 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform hover:scale-110 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-1 md:gap-2 !leading-none !tracking-normal">
+                  <span className="material-symbols-outlined text-sm md:text-xl text-primary">verified</span>
                   Beginner Friendly!
                 </div>
               </motion.div>
