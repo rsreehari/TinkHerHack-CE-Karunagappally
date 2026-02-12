@@ -33,25 +33,35 @@ const Home: React.FC = () => {
             >
               Tink-Her
             </motion.span>
-            <motion.span
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-300 relative"
-            >
-              Hack 4.0
-              {/* Sticker - Restored Stamp Style */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0, rotate: 12 }}
-                animate={{ opacity: 1, scale: 1, rotate: 12 }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="absolute -right-8 -top-8 md:-right-24 md:-top-20 z-20 hidden md:block"
+            <span className="relative inline-block">
+              <motion.span
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-300"
               >
-                <div className="bg-white text-black font-black uppercase text-xs md:text-sm px-6 py-4 shadow-[6px_6px_0px_rgba(0,0,0,1)] border-4 border-black transform rotate-6 hover:rotate-12 transition-transform cursor-pointer">
+                Hack 4.0
+              </motion.span>
+              {/* Sticker - Cooler Pop Art Style */}
+              <motion.div
+                initial={{ rotate: 12, scale: 0 }}
+                animate={{
+                  scale: 1,
+                  rotate: [12, 16, 12],
+                  y: [0, -8, 0]
+                }}
+                transition={{
+                  scale: { duration: 0.5, type: "spring" },
+                  default: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="absolute -right-16 -top-12 md:-right-36 md:-top-24 z-50 hidden md:block"
+              >
+                <div className="bg-yellow-400 !text-black font-black uppercase text-sm md:text-base px-6 py-3 shadow-[8px_8px_0px_#FF1493] border-4 border-black transform hover:scale-110 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
+                  <span className="material-symbols-outlined text-xl">verified</span>
                   Beginner Friendly!
                 </div>
               </motion.div>
-            </motion.span>
+            </span>
           </h1>
 
           {/* Subtitle with Script Font */}
