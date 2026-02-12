@@ -43,7 +43,7 @@ const Sponsors: React.FC = () => {
               {sponsors.map((p, i) => (
                 <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="block group">
                   <div className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] group-hover:translate-x-[2px] group-hover:translate-y-[2px] group-hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] transition-all border-2 border-transparent group-hover:border-black">
-                    <img className="h-20 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300" src={p.logo} alt={p.name} />
+                    <img className="h-20 w-auto object-contain transition-all duration-300" src={p.logo} alt={p.name} />
                   </div>
                 </a>
               ))}
