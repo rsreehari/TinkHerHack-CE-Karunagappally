@@ -110,7 +110,11 @@ const Home: React.FC = () => {
                 Tink-Her-Hack 4.0 consists of an 18-hour intense coding session overnight. It’s an opportunity to network with mentors, learn new technologies, and build cool projects.
               </p>
             </div>
-            <span className="material-symbols-outlined absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 text-[10rem] md:text-[15rem] text-secondary/5 group-hover:text-white/10 transition-colors duration-500">code_blocks</span>
+            <img
+              src="/women.jpg"
+              alt="Women in Tech"
+              className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 w-40 h-40 md:w-64 md:h-64 object-cover rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500 grayscale group-hover:grayscale-0"
+            />
           </div>
 
           {/* Card 2 - Stats */}
