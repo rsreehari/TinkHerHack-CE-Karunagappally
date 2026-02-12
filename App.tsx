@@ -25,7 +25,7 @@ const App: React.FC = () => {
         {/* Persistent Background Effects */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
           <div className="berry-glow-1 absolute -top-24 -left-24 w-[600px] h-[600px] rounded-full blur-3xl opacity-40"></div>
-          <div className="berry-glow-2 absolute top-1/2 -right-48 w-[800px] h-[800px] rounded-full blur-3xl opacity-30"></div>
+          <div className="blue-glow absolute top-1/2 -right-48 w-[800px] h-[800px] rounded-full blur-3xl opacity-30"></div>
           <div className="glow-overlay absolute inset-0"></div>
         </div>
 

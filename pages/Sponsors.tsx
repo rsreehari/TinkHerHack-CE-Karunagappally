@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Sponsors: React.FC = () => {
@@ -10,60 +9,81 @@ const Sponsors: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-[1200px] mx-auto w-full px-6 py-16 md:py-24 relative overflow-hidden">
-      <div className="flex flex-col items-center text-center gap-8 mb-32">
-        <span className="px-5 py-1.5 rounded-full border border-primary/40 bg-primary/5 text-primary text-xs font-bold uppercase tracking-[0.2em]">Our Ecosystem</span>
-        <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-white leading-tight">
-          Sponsors & <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-berry to-primary">Partners</span>
-        </h1>
-        <p className="max-w-2xl text-slate-400 text-lg md:text-xl leading-relaxed font-light">
-          Collaborating with visionary industry leaders and local communities to bridge the gender gap in technology.
-        </p>
-      </div>
-
-      <section className="mb-32">
-        <div className="flex items-center gap-6 mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-white">Sponsorship</h2>
-          <div className="h-[2px] flex-1 bg-gradient-to-r from-primary/40 via-berry/20 to-transparent"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
-          {sponsors.map((p, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-12 flex items-center justify-center min-h-[220px] group hover:border-primary/50 transition-all">
-              <img className="opacity-70 group-hover:opacity-100 transition-all duration-500 brightness-0 invert h-16 w-auto object-contain" src={p.logo} alt={p.name} />
-            </div>
-          ))}
+    <div className="w-full font-display">
+      {/* Header - Purple/Pink Gradient for variation or keep Blue? Let's use clean White for Intro and Blue for impact */}
+      <section className="bg-white pt-24 pb-20 px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <span className="text-secondary font-bold uppercase tracking-[0.2em] text-sm">Our Ecosystem</span>
+          <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] tracking-tighter uppercase">
+            Sponsors & <br />
+            <span className="text-primary font-script lowercase text-[1.2em] relative inline-block transform -rotate-2 mt-2">
+              partners
+              <span className="absolute -bottom-2 w-full h-3 bg-yellow-300 -z-10 opacity-50 skew-x-12"></span>
+            </span>
+          </h1>
+          <p className="text-xl text-slate-500 font-body max-w-2xl mx-auto">
+            Collaborating with visionary industry leaders and local communities to bridge the gender gap in technology.
+          </p>
         </div>
       </section>
 
-      <section className="mb-20">
-        <div className="flex items-center gap-6 mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-white">Our Community Partners</h2>
-          <div className="h-[2px] flex-1 bg-gradient-to-r from-berry/40 via-primary/20 to-transparent"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          {community.map((c, i) => (
-            <div key={i} className="flex flex-col items-center gap-4 group">
-              <div className="w-full aspect-video bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center p-8 group-hover:border-primary/50 transition-all">
-                <img className="opacity-60 group-hover:opacity-100 transition-all duration-500 w-24 h-24 object-contain brightness-0 invert" src={c.img} alt={c.name} />
-              </div>
-              <span className="text-sm font-bold text-slate-500 group-hover:text-primary uppercase tracking-[0.2em] transition-colors">{c.name}</span>
+      {/* Sponsors Section - Royal Blue Background */}
+      <section className="bg-secondary text-white py-24 px-6 rounded-t-[3rem] -mt-10 relative z-10 shadow-[0_-20px_40px_rgba(0,0,0,0.1)]">
+        <div className="max-w-6xl mx-auto">
+          {/* Sponsorship */}
+          <div className="mb-24">
+            <div className="flex items-end gap-6 mb-12 border-b border-white/20 pb-8">
+              <h2 className="text-4xl md:text-5xl font-black uppercase">Sponsorship</h2>
+              <span className="font-script text-2xl text-pink-300 pb-2">Our Pillars</span>
             </div>
-          ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {sponsors.map((p, i) => (
+                <div key={i} className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] transition-all border-2 border-transparent hover:border-black">
+                  <img className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src={p.logo} alt={p.name} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Community Partners */}
+          <div>
+            <div className="flex items-end gap-6 mb-12 border-b border-white/20 pb-8">
+              <h2 className="text-4xl md:text-5xl font-black uppercase">Community</h2>
+              <span className="font-script text-2xl text-yellow-300 pb-2">Friends</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {community.map((c, i) => (
+                <div key={i} className="group relative">
+                  <div className="bg-surface-highlight rounded-[2rem] p-8 aspect-square flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-2 border-white/10 group-hover:border-primary">
+                    <img className="w-24 h-24 object-contain brightness-0 invert opacity-60 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" src={c.img} alt={c.name} />
+                  </div>
+                  <div className="text-center">
+                    <span className="font-bold uppercase tracking-widest text-sm text-white/70 group-hover:text-white transition-colors">{c.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="mt-40 p-16 rounded-[3rem] bg-gradient-to-br from-primary/10 via-background-dark to-berry/10 border border-white/10 text-center relative overflow-hidden backdrop-blur-xl">
-        <h3 className="text-4xl font-bold mb-6">United by Innovation</h3>
-        <p className="text-slate-400 text-lg mb-0 max-w-2xl mx-auto leading-relaxed font-light">
-          Our partners are the backbone of Tink-Her-Hack. They provide the resources, mentorship, and support that empower women to excel in the tech landscape.
-        </p>
-        <div className="mt-10 flex justify-center gap-10 opacity-40">
-          <span className="material-symbols-outlined text-4xl text-primary">hub</span>
-          <span className="material-symbols-outlined text-4xl text-berry">diversity_1</span>
-          <span className="material-symbols-outlined text-4xl text-primary">rocket_launch</span>
+      {/* Bottom CTA */}
+      <section className="bg-white pt-32 pb-24 px-6 -mt-10 relative z-0">
+        <div className="max-w-4xl mx-auto text-center bg-yellow-50 rounded-[3rem] p-16 border-4 border-yellow-300 relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-4xl font-black text-slate-900 mb-6 uppercase">United by Innovation</h3>
+            <div className="flex justify-center gap-8 mb-8">
+              <span className="material-symbols-outlined text-5xl text-primary animate-bounce">favorite</span>
+              <span className="material-symbols-outlined text-5xl text-secondary animate-bounce" style={{ animationDelay: '0.2s' }}>handshake</span>
+            </div>
+            <p className="text-xl text-slate-600 font-body mb-0">
+              Our partners are the backbone of Tink-Her-Hack. They provide the resources, mentorship, and support.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

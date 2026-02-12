@@ -7,7 +7,9 @@
     <title>Tink-Her-Hack 4.0 | Build Without Limits</title>
     <link rel="icon" type="image/png" href="/tink-her-hack.png">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@300,400,500,600,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Kaushan+Script&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet">
@@ -17,14 +19,42 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ff1492",
-                        "berry": "#C71585",
-                        "background-light": "#f8f5f7",
-                        "background-dark": "#0a0508",
+                        "primary": "#FF1493", // Deep Pink
+                        "secondary": "#4169E1", // Royal Blue
+                        "th-yellow": "#FFD700",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#4169E1", // Main background is now Royal Blue based on screenshots
+                        "surface": "#FFFFFF", // Cards are white
+                        "surface-highlight": "#F0F0F0",
                     },
                     fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
+                        "display": ["Clash Display", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "outfit": ["Outfit", "sans-serif"],
+                        "script": ["Kaushan Script", "cursive"]
                     },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'wiggle': 'wiggle 2s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        blob: {
+                            '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                        }
+                    }
                 }
             }
         }
@@ -44,6 +74,10 @@
 
         .berry-glow-2 {
             background: radial-gradient(circle, rgba(255, 20, 146, 0.2) 0%, transparent 70%);
+        }
+
+        .blue-glow {
+            background: radial-gradient(circle, rgba(65, 105, 225, 0.25) 0%, transparent 70%);
         }
 
         ::-webkit-scrollbar {

@@ -1,99 +1,151 @@
-
 import React from 'react';
 import CountdownTimer from '../components/CountdownTimer';
+import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-16 lg:py-24 text-center">
-      <div className="max-w-5xl w-full space-y-12">
-        <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
-            <span className="material-symbols-outlined text-sm">stars</span>
-            Kerala's Largest Women-Only Hackathon
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight text-white">
-            Tink-Her-Hack 4.0 – <br />
-            <span className="bg-gradient-to-r from-primary via-primary to-berry bg-clip-text text-transparent">Build Without Limits</span> <span className="inline-block animate-pulse"></span>
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-medium leading-relaxed">
-            Join 6000+ women across 60+ venues in Kerala for a massive learning and building experience. No experience required!
-          </p>
-        </div>
+    <div className="flex flex-col w-full overflow-hidden font-display">
+      {/* HERO SECTION - Royal Blue Background */}
+      <section className="relative w-full bg-secondary min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-20 overflow-hidden">
+        {/* Decorative Blobs */}
+        <div className="absolute top-20 left-[10%] w-64 h-64 bg-white/10 blur-[80px] rounded-full animate-float pointer-events-none"></div>
+        <div className="absolute bottom-20 right-[10%] w-80 h-80 bg-primary/20 blur-[80px] rounded-full animate-float pointer-events-none" style={{ animationDelay: '2s' }}></div>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 max-w-5xl mx-auto">
-          <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
-            <span className="material-symbols-outlined text-primary text-3xl mb-2">schedule</span>
-            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Duration</span>
-            <span className="text-2xl font-bold">18h</span>
-          </div>
-          <div className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all">
-            <span className="material-symbols-outlined text-primary text-3xl mb-2">calendar_month</span>
-            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Date</span>
-            <span className="text-2xl font-bold">Feb 20, 21</span>
-          </div>
-          <a href="https://maps.app.goo.gl/hfzQmCcru8n4RuxY6" target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[200px] p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center gap-1 group hover:border-primary/50 transition-all hover:bg-white/10">
-            <span className="material-symbols-outlined text-primary text-3xl mb-2">location_on</span>
-            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Venue</span>
-            <span className="text-xl font-bold text-center leading-tight">CE Karunagappally</span>
-          </a>
-        </div>
-
-        <div className="py-8">
-          <CountdownTimer />
-        </div>
-
-        <div className="flex flex-col items-center gap-6 pt-8">
-          <a
-            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-12 py-6 bg-primary text-white text-xl font-bold rounded-2xl transition-all shadow-[0_10px_40px_rgba(255,20,146,0.4)] hover:shadow-[0_15px_50px_rgba(255,20,146,0.6)] hover:-translate-y-1 overflow-hidden inline-block"
+        <div className="relative z-10 max-w-7xl mx-auto space-y-8">
+          {/* Badge */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className="inline-block"
           >
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            <span className="relative">Register Now</span>
-          </a>
-          <p className="text-sm text-slate-500 flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">info</span>
-            Registration closes on Feb 15th
-          </p>
-        </div>
+            <span className="bg-white/10 border border-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full font-bold tracking-widest uppercase text-sm shadow-xl">
+              Feb 20-21 • CE Karunagappally
+            </span>
+          </motion.div>
 
-        {/* Past Memories Section */}
-        <div className="w-full pt-16 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
-            Past Memories
-          </h2>
-
-          <div className="relative w-full overflow-hidden rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm p-4">
-            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background-dark to-transparent z-10"></div>
-            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background-dark to-transparent z-10"></div>
-
-            <div className="flex animate-marquee gap-6">
-              {[
-                "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
-                // Duplicated for seamless loop
-                "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400",
-                "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
-              ].map((src, idx) => (
-                <div key={idx} className="flex-shrink-0 w-64 h-48 rounded-xl overflow-hidden border border-white/10 group">
-                  <img
-                    src={src}
-                    alt={`Memory ${idx + 1}`}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0"
-                  />
+          {/* Main Title */}
+          <h1 className="text-7xl md:text-9xl font-black text-white leading-[0.9] tracking-tighter uppercase relative">
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="block"
+            >
+              Tink-Her
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-300 relative"
+            >
+              Hack 4.0
+              {/* Sticker - Restored Stamp Style */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0, rotate: 12 }}
+                animate={{ opacity: 1, scale: 1, rotate: 12 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="absolute -right-8 -top-8 md:-right-24 md:-top-20 z-20 hidden md:block"
+              >
+                <div className="bg-white text-black font-black uppercase text-xs md:text-sm px-6 py-4 shadow-[6px_6px_0px_rgba(0,0,0,1)] border-4 border-black transform rotate-6 hover:rotate-12 transition-transform cursor-pointer">
+                  Beginner Friendly!
                 </div>
-              ))}
+              </motion.div>
+            </motion.span>
+          </h1>
+
+          {/* Subtitle with Script Font */}
+          <div className="text-2xl md:text-4xl text-white font-medium mt-4 relative inline-block">
+            Made for <span className="font-script text-4xl md:text-6xl text-yellow-300 relative z-10 mx-2 transform -rotate-3 inline-block">women</span> who build.
+            <svg className="absolute w-[110%] h-4 -bottom-2 -left-[5%] text-primary opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+            </svg>
+          </div>
+
+          <div className="pt-12 pb-8">
+            <CountdownTimer />
+          </div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a
+              href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-secondary text-xl md:text-2xl font-black px-12 py-6 rounded-2xl shadow-[8px_8px_0px_rgba(255,20,147,1)] hover:shadow-[4px_4px_0px_rgba(255,20,147,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all inline-flex items-center gap-3 border-2 border-transparent hover:border-white"
+            >
+              REGISTER NOW
+              <span className="material-symbols-outlined text-3xl font-bold">arrow_outward</span>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* INFO GRID - White Background for Readability */}
+      <section className="bg-white py-24 px-6 relative">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          {/* Card 1 */}
+          <div className="col-span-1 md:col-span-2 bg-secondary/5 border-2 border-secondary/10 rounded-[2.5rem] p-10 md:p-14 relative overflow-hidden group hover:bg-secondary hover:text-white transition-colors duration-500">
+            <div className="relative z-10 space-y-6">
+              <h3 className="text-4xl md:text-6xl font-bold leading-tight group-hover:text-white text-secondary">
+                Break the <br />
+                <span className="font-script text-primary text-5xl md:text-7xl group-hover:text-yellow-300 transition-colors">bias</span>
+              </h3>
+              <p className="text-lg md:text-xl text-slate-600 font-body leading-relaxed group-hover:text-white/90 max-w-lg">
+                Tink-Her-Hack 4.0 consists of an 18-hour intense coding session overnight. It’s an opportunity to network with mentors, learn new technologies, and build cool projects.
+              </p>
+            </div>
+            <span className="material-symbols-outlined absolute -bottom-10 -right-10 text-[15rem] text-secondary/5 group-hover:text-white/10 transition-colors duration-500">code_blocks</span>
+          </div>
+
+          {/* Card 2 - Stats - Updated with Scholarships */}
+          <div className="col-span-1 bg-primary text-white rounded-[2.5rem] p-10 flex flex-col justify-between shadow-[10px_10px_0px_#4169E1] hover:shadow-[5px_5px_0px_#4169E1] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-black">
+            <div>
+              <span className="font-bold uppercase tracking-widest opacity-80 mb-2 block">Format</span>
+              <div className="text-6xl font-black mb-1">18H</div>
+              <div className="font-script text-3xl">Of Coding</div>
+            </div>
+            <div className="mt-12">
+              <span className="font-bold uppercase tracking-widest opacity-80 mb-2 block">Opportunity</span>
+              <div className="text-5xl font-black mb-1">100%</div>
+              <div className="font-script text-2xl">Scholarships</div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* MEMORIES SECTION - Darker Blue for high contrast */}
+      <section className="bg-background-dark py-24 px-0 relative overflow-hidden">
+        <div className="container mx-auto px-6 mb-16 text-center">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
+            PAST <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-400 font-script">memories</span>
+          </h2>
+          <p className="text-white/70 text-xl max-w-2xl mx-auto">
+            Moments from our previous editions where ideas came to life.
+          </p>
+        </div>
+
+        {/* Marquee */}
+        <div className="flex animate-marquee gap-8 w-max pl-6">
+          {[
+            "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+            // Duplicate for loop
+            "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
+          ].map((src, i) => (
+            <div key={i} className="w-[400px] h-[280px] rounded-3xl overflow-hidden border-4 border-white transform rotate-2 hover:rotate-0 transition-all duration-300 hover:scale-105 shadow-2xl shrink-0">
+              <img src={src} className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

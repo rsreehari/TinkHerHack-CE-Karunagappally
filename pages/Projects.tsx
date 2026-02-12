@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
   const pastProjects = [
@@ -14,60 +15,77 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
-      <header className="text-center mb-20">
-        <span className="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Archive of Excellence</span>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Legacy of <span className="text-primary [text-shadow:0_0_20px_rgba(249,26,145,0.4)]">Creation</span></h1>
-        <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-          Explore the infinite wall of innovation. A curated showcase of revolutionary projects built by women-led teams during Tink-Her-Hack 4.0.
-        </p>
-      </header>
+    <div className="w-full font-display">
+      {/* Header Section - Blue Background */}
+      <section className="bg-secondary pt-32 pb-24 px-6 text-center text-white relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-40 h-40 bg-white/10 blur-[50px] rounded-full animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary/20 blur-[60px] rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {pastProjects.map((project) => (
-          <a
-            key={project.id}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(249,26,145,0.2)] transition-all duration-500 block flex flex-col h-full"
-          >
-            <div className="h-40 w-full relative overflow-hidden bg-gradient-to-br from-white/5 to-white/10 group-hover:from-primary/20 group-hover:to-purple-900/20 transition-all duration-500 flex items-center justify-center">
-              <span className="material-symbols-outlined text-6xl text-white/20 group-hover:text-primary transition-all duration-500 scale-100 group-hover:scale-110">{project.icon}</span>
-            </div>
-            <div className="p-8 flex-1 flex flex-col">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{project.title}</h3>
-                <span className="material-symbols-outlined text-primary text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
-              </div>
-              <p className="text-sm text-slate-400 line-clamp-3 leading-relaxed flex-1">{project.desc}</p>
-              <div className="mt-6 flex items-center text-xs font-bold text-primary uppercase tracking-widest">
-                View Project <span className="material-symbols-outlined text-xs ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      <div className="mt-32 p-12 rounded-[2.5rem] bg-gradient-to-r from-primary to-purple-700 relative overflow-hidden">
-        <div className="absolute top-0 right-0 p-12 opacity-20 pointer-events-none">
-          <span className="material-symbols-outlined text-[12rem]">history_edu</span>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <span className="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">
+            Archive of Excellence
+          </span>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 uppercase">
+            Legacy of <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 relative">Creation
+              <svg className="absolute w-full h-8 -bottom-2 left-0 text-primary opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+              </svg>
+            </span>
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto font-body">
+            Explore the infinite wall of innovation. A curated showcase of revolutionary projects built by women-led teams.
+          </p>
         </div>
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
-          <div>
-            <h2 className="text-4xl font-black text-white mb-3">Be part of the next legacy</h2>
-            <p className="text-white/80 max-w-lg text-lg">Registration for Tink-Her-Hack 4.0 is opening soon. Join thousands of creators making a difference in the world of technology.</p>
+      </section>
+
+      {/* Grid Section - White Background */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {pastProjects.map((project, idx) => (
+            <motion.a
+              key={project.id}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              whileHover={{ y: -5, boxShadow: "10px 10px 0px rgba(65, 105, 225, 0.2)" }}
+              className="group bg-surface-highlight border-2 border-slate-100 rounded-[2rem] p-8 flex flex-col hover:border-secondary transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform text-secondary border border-slate-100">
+                <span className="material-symbols-outlined text-3xl">{project.icon}</span>
+              </div>
+
+              <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-secondary transition-colors">{project.title}</h3>
+              <p className="text-slate-500 font-body leading-relaxed mb-8 line-clamp-3">{project.desc}</p>
+
+              <div className="mt-auto pt-6 border-t border-slate-200 flex items-center justify-between">
+                <span className="text-sm font-bold uppercase tracking-widest text-slate-400 group-hover:text-primary transition-colors">View Project</span>
+                <span className="material-symbols-outlined text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Call to Action Card in Grid */}
+        <div className="max-w-7xl mx-auto mt-20">
+          <div className="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-[12px_12px_0px_#4169E1] border-4 border-black">
+            <div className="relative z-10 space-y-8">
+              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight">Be part of the next <span className="font-script text-yellow-300 transform -rotate-3 inline-block">legacy</span></h2>
+              <p className="text-lg font-medium max-w-2xl mx-auto opacity-90">Registration for Tink-Her-Hack 4.0 is opening soon. Join thousands of creators making a difference.</p>
+
+              <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-black text-xl font-bold px-10 py-5 rounded-xl shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all border-2 border-black">
+                REGISTER NOW
+              </a>
+            </div>
+
+            {/* Decorative Background Icon */}
+            <span className="material-symbols-outlined absolute -bottom-20 -right-20 text-[20rem] text-white opacity-10 rotate-12">history_edu</span>
           </div>
-          <a
-            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-primary px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all hover:-translate-y-1 whitespace-nowrap block"
-          >
-            Register Now
-          </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

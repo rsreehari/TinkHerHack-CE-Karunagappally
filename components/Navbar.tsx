@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md"
+    >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <img
@@ -37,23 +43,30 @@ const Navbar: React.FC = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${isActive(link.path) ? 'text-primary' : 'text-slate-300'
-                }`}
+              className={`text-sm font-medium transition-colors hover:text-primary relative group ${isActive(link.path) ? 'text-primary' : 'text-slate-300'}`}
             >
               {link.name}
+              {isActive(link.path) && (
+                <motion.span
+                  layoutId="underline"
+                  className="absolute left-0 right-0 -bottom-1 h-0.5 bg-primary"
+                />
+              )}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-4">
-          <a
+          <motion.a
             href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
           >
             Register Now
-          </a>
+          </motion.a>
 
           {/* Mobile Toggle */}
           <button
@@ -67,7 +80,11 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-background-dark border-b border-white/10 p-6 flex flex-col gap-4">
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          className="md:hidden bg-background-dark border-b border-white/10 p-6 flex flex-col gap-4"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -86,9 +103,9 @@ const Navbar: React.FC = () => {
           >
             Register Now
           </a>
-        </div>
+        </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 };
 

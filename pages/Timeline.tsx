@@ -43,7 +43,7 @@ const Timeline: React.FC = () => {
         {/* Scrollable Track */}
         <div className="overflow-x-auto pb-12 cursor-grab active:cursor-grabbing px-[10%] relative">
           <div className="absolute h-1 bg-primary/20 w-[3000px] top-1/2 -translate-y-1/2 z-0"></div>
-          <div className="absolute h-1 bg-gradient-to-r from-primary to-purple-500 w-[1200px] top-1/2 -translate-y-1/2 z-0 shadow-[0_0_20px_rgba(249,26,145,0.6)]"></div>
+          <div className="absolute h-1 bg-gradient-to-r from-primary to-secondary w-[1200px] top-1/2 -translate-y-1/2 z-0 shadow-[0_0_20px_rgba(249,26,145,0.6)]"></div>
 
           <div className="flex gap-40 relative z-10 pr-64 py-32">
             {events.map((event, idx) => (
