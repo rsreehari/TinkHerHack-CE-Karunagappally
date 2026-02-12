@@ -1,60 +1,59 @@
+
+# 🌸 Tink-Her-Hack 4.0: Build Without Limits
+
 <div align="center">
 
-# 🌸 Tink-Her-Hack 4.0
+![Tink-Her-Hack 4.0](https://tinkerhub.org/assets/images/thh_logo.png)
 
-**Build Without Limits**
+**Kerala's Largest Women-Centric Hackathon**  
+*Hosted at College of Engineering Karunagappally*
 
 </div>
 
-## Overview
+## 🌟 About The Event
 
-Welcome to the official web portal for **Tink-Her-Hack 4.0**, a hackathon designed to empower and inspire. This project features a modern, responsive design with a "berry" glow aesthetic, a timeline of events, and sponsor showcases.
+**Tink-Her-Hack 4.0** is not just a hackathon; it's a movement. As the flagship women-centric hackathon by **TinkerHub**, we are on a mission to break barriers and foster inclusivity in technology. 
 
-## Features
+Designed for **complete beginners** and seasoned builders alike, this 18-hour sprint provides a safe, non-competitive space for women and non-binary students to experiment, learn, and build their first (or next) project.
 
--   **✨ Modern UI/UX**: Built with React, Tailwind CSS, and Framer Motion (assumed based on style).
--   **📱 Responsive Design**: Optimized for both desktop and mobile devices.
--   **📅 Event Timeline**: Interactive schedule of the hackathon.
--   **🏆 Project & Sponsor Showcases**: Dedicated sections for highlighting projects and partners.
+### Why Join?
 
-## 🚀 Getting Started
+*   **🚀 Beginner Friendly**: No prior coding experience? No problem! We have dedicated mentors to guide you from idea to prototype.
+*   **🤝 Inclusive Environment**: A supportive atmosphere where collaboration triumphs over competition.
+*   **👩‍💻 Massive Scale**: Join **6,000+ participants** across **60+ venues** in Kerala.
+*   **🎓 Archive of Excellence**: Be part of a legacy that has produced over **1,800+ innovative projects**.
 
-Follow these steps to run the project locally.
+## 📅 Event Details
 
-### Prerequisites
+*   **Date**: February 20 - 21, 2026
+*   **Duration**: 18 Hours (Overnight Hackathon)
+*   **Venue**: College of Engineering Karunagappally
+*   **Format**: Offline Participation
 
--   Node.js (v16 or higher recommended)
--   npm or yarn
+## 🛤️ Roadmap
 
-### Installation
+| Time | Activity |
+| :--- | :--- |
+| **Feb 20, 05:00 PM** | 📍 Arrival & Registration |
+| **Feb 20, 05:30 PM** | 🎉 Opening Ceremony |
+| **Feb 20, 06:00 PM** | 💻 **Hacking Begins!** |
+| **Feb 20, 10:00 PM** | 🍽️ Dinner & Mentoring Rounds |
+| **Feb 21, 01:00 AM** | 🧊 Midnight Ice-Breakers |
+| **Feb 21, 08:00 AM** | ☕ Breakfast & Final Lap |
+| **Feb 21, 12:00 PM** | 🛑 Hacking Ends |
+| **Feb 21, 01:00 PM** | 🏆 Judging & Results |
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/rsreehari/TinkHerHack-CE-Karunagappally.git
-    cd TinkHerHack-CE-Karunagappally
-    ```
+## 🔗 Quick Links
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server**
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## 🛠️ Tech Stack
-
--   **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **Routing**: [React Router v6/v7](https://reactrouter.com/)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+*   **Official Event Page**: [Register Here](https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0)
+*   **Venue Location**: [Google Maps](https://maps.app.goo.gl/hfzQmCcru8n4RuxY6)
+*   **Community**: [Join WhatsApp Group](https://chat.whatsapp.com/E1JqJuyUgHqFjnAb3UPg35)
 
 ---
 
-<p align="center">Made with ❤️ for Tink-Her-Hack 4.0</p>
+<div align="center">
+
+**Organized by TinkerHub CE Karunagappally**  
+*Empowering the next generation of women makers.*
+
+</div>
