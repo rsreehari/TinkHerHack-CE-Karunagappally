@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Sponsors: React.FC = () => {
-  const sponsors = Array(1).fill({ name: "Partner", logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIEHUYZV0HT_UuBQCH55cA4BsA5r2QYC47t8zkIWYttm6zKBWhMzHOQ-5uBX4LpYziAYwl4UUhMCIwxRIzahLd5npYetp9fEfjC1hVhxI5bLpaEcAdZNjD1GZnxasP5-VYjZnXO6DAQn4MJFZPW3gQ6j77-oCnyz-BVL95GeNSUsIECf1r3XmxHsixMQr_F34byVDm6qhh_hwn4GcTpxTqYOjHzzg1N34kJ3MV59wWRmq5QGLaMybWmbcVEpMxAD6RiRpyj0tQOpZ2" });
+  const sponsors = [
+    { name: "CareStack", logo: "/carestack.svg" }
+  ];
 
   const community = [
     { name: "FOSS Club CEKNPY", img: "/foss.jpeg" },
