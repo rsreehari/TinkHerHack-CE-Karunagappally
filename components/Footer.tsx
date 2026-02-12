@@ -17,43 +17,49 @@ const Footer: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
           {/* General Inquiry */}
-          <div className="bg-white text-black rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] group">
-            <div className="bg-primary text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-              <span className="material-symbols-outlined text-2xl">mail</span>
+          <a href="mailto:thceknpy@gmail.com" className="block group">
+            <div className="bg-white text-black h-full rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <div className="bg-primary text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                <span className="material-symbols-outlined text-2xl">mail</span>
+              </div>
+              <h4 className="text-xl font-black uppercase mb-1">General Inquiry</h4>
+              <p className="text-slate-600 font-bold text-sm mb-4">For partnerships & queries</p>
+              <div className="text-secondary font-black hover:underline flex items-center gap-1 text-sm md:text-base break-all">
+                thceknpy@gmail.com
+                <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </div>
             </div>
-            <h4 className="text-xl font-black uppercase mb-1">General Inquiry</h4>
-            <p className="text-slate-600 font-bold text-sm mb-4">For partnerships & queries</p>
-            <a href="mailto:thceknpy@gmail.com" className="text-secondary font-black hover:underline flex items-center gap-1 group/link text-sm md:text-base break-all">
-              thceknpy@gmail.com
-              <span className="material-symbols-outlined text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-            </a>
-          </div>
+          </a>
 
           {/* Campus Lead */}
-          <div className="bg-white text-black rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] group">
-            <div className="bg-[#25D366] text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-              <span className="material-symbols-outlined text-2xl">person</span>
+          <a href="https://wa.link/cqqrze" target="_blank" rel="noopener noreferrer" className="block group">
+            <div className="bg-white text-black h-full rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <div className="bg-[#25D366] text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                <span className="material-symbols-outlined text-2xl">person</span>
+              </div>
+              <h4 className="text-xl font-black uppercase mb-1">Campus Lead</h4>
+              <p className="text-slate-600 font-bold text-sm mb-4">Abhijith B</p>
+              <div className="text-[#25D366] font-black hover:underline flex items-center gap-1 text-lg">
+                Chat on WhatsApp
+                <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </div>
             </div>
-            <h4 className="text-xl font-black uppercase mb-1">Campus Lead</h4>
-            <p className="text-slate-600 font-bold text-sm mb-4">Abhijith B</p>
-            <a href="https://wa.link/cqqrze" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-black hover:underline flex items-center gap-1 group/link text-lg">
-              Chat on WhatsApp
-              <span className="material-symbols-outlined text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-            </a>
-          </div>
+          </a>
 
           {/* WiT Lead */}
-          <div className="bg-white text-black rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] group">
-            <div className="bg-[#bc1888] text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-              <span className="material-symbols-outlined text-2xl">person_4</span>
+          <a href="https://wa.link/ci1465" target="_blank" rel="noopener noreferrer" className="block group">
+            <div className="bg-white text-black h-full rounded-3xl p-6 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <div className="bg-[#bc1888] text-white p-3 rounded-xl w-fit mb-4 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
+                <span className="material-symbols-outlined text-2xl">person_4</span>
+              </div>
+              <h4 className="text-xl font-black uppercase mb-1">WiT Lead</h4>
+              <p className="text-slate-600 font-bold text-sm mb-4">Summaya Sainu</p>
+              <div className="text-[#bc1888] font-black hover:underline flex items-center gap-1 text-lg">
+                Chat on WhatsApp
+                <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </div>
             </div>
-            <h4 className="text-xl font-black uppercase mb-1">WiT Lead</h4>
-            <p className="text-slate-600 font-bold text-sm mb-4">Summaya Sainu</p>
-            <a href="https://wa.link/ci1465" target="_blank" rel="noopener noreferrer" className="text-[#bc1888] font-black hover:underline flex items-center gap-1 group/link text-lg">
-              Chat on WhatsApp
-              <span className="material-symbols-outlined text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
-            </a>
-          </div>
+          </a>
         </div>
       </div>
 
