@@ -98,7 +98,7 @@ const About: React.FC = () => {
       <section className="py-20">
         <div className="flex flex-col md:flex-row items-center gap-16 bg-white rounded-[3rem] p-12 border-4 border-black shadow-[12px_12px_0px_#000]">
           <div className="flex-1 space-y-8">
-            <h2 className="text-5xl md:text-6xl font-black uppercase leading-none">Breaking Barriers,<br /><span className="text-primary">One Line</span> at a Time.</h2>
+            <h2 className="text-5xl md:text-6xl font-black uppercase leading-none text-slate-900">Breaking Barriers,<br /><span className="text-primary">One Line</span> at a Time.</h2>
             <p className="text-slate-600 text-xl leading-relaxed font-medium">
               Tink-Her-Hack was born from a simple observation: the gender gap in tech isn't about ability, but accessibility. We create a safe space for women and non-binary students.
             </p>
