@@ -42,7 +42,7 @@ const Sponsors: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {sponsors.map((p, i) => (
                 <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="block group">
-                  <div className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] group-hover:translate-x-[2px] group-hover:translate-y-[2px] group-hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] transition-all border-2 border-transparent group-hover:border-black">
+                  <div className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] transform transition-transform duration-300 group-hover:scale-105 group-active:scale-95 group-hover:shadow-[12px_12px_0px_rgba(0,0,0,0.3)] border-2 border-transparent group-hover:border-black">
                     <img className="h-20 w-auto object-contain transition-all duration-300" src={p.logo} alt={p.name} />
                   </div>
                 </a>
@@ -60,7 +60,7 @@ const Sponsors: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-12">
               {community.map((c, i) => (
                 <a href={c.link} target="_blank" rel="noopener noreferrer" key={i} className="group relative block">
-                  <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transition-all duration-300 group-hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
+                  <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transform transition-all duration-300 group-hover:scale-110 group-active:scale-95 group-hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
                     <img className="w-full h-full object-contain invert" src={c.img} alt={c.name} />
                   </div>
                   <div className="text-center">
