@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-sm font-medium transition-colors hover:text-primary relative group ${activeSection === link.id ? 'text-primary' : 'text-slate-300'}`}
+              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-primary relative group ${activeSection === link.id ? 'text-primary' : 'text-white/90 hover:text-white'}`}
             >
               {link.name}
               {activeSection === link.id && (
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-lg font-medium text-left ${activeSection === link.id ? 'text-primary' : 'text-slate-300'}`}
+              className={`text-lg font-bold uppercase tracking-wider text-left ${activeSection === link.id ? 'text-primary' : 'text-white/90'}`}
             >
               {link.name}
             </button>
