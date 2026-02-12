@@ -39,9 +39,9 @@ const Sponsors: React.FC = () => {
               <span className="font-script text-2xl text-pink-300 pb-2">Our Pillars</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {sponsors.map((p, i) => (
-                <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="block group">
+                <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="block group w-full md:w-[calc(50%-1rem)] max-w-sm">
                   <div className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] transform transition-transform duration-300 group-hover:scale-105 group-active:scale-95 group-hover:shadow-[12px_12px_0px_rgba(0,0,0,0.3)] border-2 border-transparent group-hover:border-black">
                     <img className="h-20 w-auto object-contain transition-all duration-300" src={p.logo} alt={p.name} />
                   </div>
