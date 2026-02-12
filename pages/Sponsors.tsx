@@ -4,8 +4,8 @@ const Sponsors: React.FC = () => {
   const sponsors = Array(1).fill({ name: "Partner", logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIEHUYZV0HT_UuBQCH55cA4BsA5r2QYC47t8zkIWYttm6zKBWhMzHOQ-5uBX4LpYziAYwl4UUhMCIwxRIzahLd5npYetp9fEfjC1hVhxI5bLpaEcAdZNjD1GZnxasP5-VYjZnXO6DAQn4MJFZPW3gQ6j77-oCnyz-BVL95GeNSUsIECf1r3XmxHsixMQr_F34byVDm6qhh_hwn4GcTpxTqYOjHzzg1N34kJ3MV59wWRmq5QGLaMybWmbcVEpMxAD6RiRpyj0tQOpZ2" });
 
   const community = [
-    { name: "Tech Ladies", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBtcoC2MxElbHzy9dI6aaiE4yuiKeL7Y6TN6stwPNCsb5SGumoEkzfGwSIkF5rV_kDxFQ5jq-f9XYFA8LXVbVTMjsrBZthimHUzuPgbFe_vAcg32STY7u2S2AfbkrB3koZGrqQ9Fd2_sMsJH9WsxGPdJxKt-IVPBPrPeJNilhp-QCDmMXQz2WToEiLpck2PqWsJ-g-pLYVRQDSTEavtEkiTvzEUyu0R9kg2DvFf2WApoeTgxxYxGSW4O_6mRdIVdYO5p0NjssxrTpQd" },
-    { name: "Campus Club", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDHjN2_BIlrc1TIUR1k8NZgKecokQa7JMBTseUaip1muLnPiETMQCWvoZAwS53ez7lu7RLl4Whet-k1Wg7-5mnz2mF0RtoA0315s8Pfg3hTsUGAaJFEa1_FvPpopTyHGwsY583uSVr9H-t_MFcPzDhM2Aq6hbpkr9VnvuixK-W0T-FLkr75S86HmqvJ0IZZOPWeQSKkPikhRmY673akNef9z6I5n8BkXnKWPq0OrEw4Ufqc8oI0AkxOocL3iWgUWsgStVkE_ltrUkfe" }
+    { name: "FOSS Cell", img: "/foss.jpeg" },
+    { name: "Gtech Mulearn", img: "/mulearn.jpeg" }
   ];
 
   return (
@@ -53,14 +53,14 @@ const Sponsors: React.FC = () => {
               <span className="font-script text-2xl text-yellow-300 pb-2">Friends</span>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap justify-center gap-12">
               {community.map((c, i) => (
                 <div key={i} className="group relative">
-                  <div className="bg-surface-highlight rounded-[2rem] p-8 aspect-square flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-2 border-white/10 group-hover:border-primary">
-                    <img className="w-24 h-24 object-contain brightness-0 invert opacity-60 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" src={c.img} alt={c.name} />
+                  <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
+                    <img className="w-full h-full object-contain" src={c.img} alt={c.name} />
                   </div>
                   <div className="text-center">
-                    <span className="font-bold uppercase tracking-widest text-sm text-white/70 group-hover:text-white transition-colors">{c.name}</span>
+                    <span className="font-bold uppercase tracking-widest text-sm text-white/90 group-hover:text-white transition-colors">{c.name}</span>
                   </div>
                 </div>
               ))}
