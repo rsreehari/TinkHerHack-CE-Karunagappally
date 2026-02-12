@@ -118,7 +118,7 @@ const About: React.FC = () => {
               <img
                 alt="Women in tech"
                 className="w-full h-full object-cover rounded-[1.5rem] md:rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-500"
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
+                src="/women2.jpeg"
               />
             </div>
           </div>
