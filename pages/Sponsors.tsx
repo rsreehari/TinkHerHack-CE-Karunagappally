@@ -2,12 +2,12 @@ import React from 'react';
 
 const Sponsors: React.FC = () => {
   const sponsors = [
-    { name: "CareStack", logo: "/carestack.svg" }
+    { name: "CareStack", logo: "/carestack.svg", link: "https://carestack.com/" }
   ];
 
   const community = [
-    { name: "FOSS Club CEKNPY", img: "/foss.jpeg" },
-    { name: "Mulearn KNP", img: "/mulearn.jpeg" }
+    { name: "FOSS Club CEKNPY", img: "/foss.jpeg", link: "https://www.instagram.com/fossceknpy/" },
+    { name: "Mulearn KNP", img: "/mulearn.jpeg", link: "https://www.instagram.com/mulearn.knp/" }
   ];
 
   return (
@@ -41,9 +41,11 @@ const Sponsors: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {sponsors.map((p, i) => (
-                <div key={i} className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] transition-all border-2 border-transparent hover:border-black">
-                  <img className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src={p.logo} alt={p.name} />
-                </div>
+                <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="block group">
+                  <div className="bg-white rounded-[2rem] p-12 flex items-center justify-center min-h-[220px] shadow-[8px_8px_0px_rgba(0,0,0,0.3)] group-hover:translate-x-[2px] group-hover:translate-y-[2px] group-hover:shadow-[4px_4px_0px_rgba(0,0,0,0.3)] transition-all border-2 border-transparent group-hover:border-black">
+                    <img className="h-20 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300" src={p.logo} alt={p.name} />
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -57,14 +59,14 @@ const Sponsors: React.FC = () => {
 
             <div className="flex flex-wrap justify-center gap-12">
               {community.map((c, i) => (
-                <div key={i} className="group relative">
-                  <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
+                <a href={c.link} target="_blank" rel="noopener noreferrer" key={i} className="group relative block">
+                  <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transition-all duration-300 group-hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
                     <img className="w-full h-full object-contain invert" src={c.img} alt={c.name} />
                   </div>
                   <div className="text-center">
                     <span className="font-bold uppercase tracking-widest text-sm text-white/90 group-hover:text-white transition-colors">{c.name}</span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
