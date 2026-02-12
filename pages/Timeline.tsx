@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Timeline: React.FC = () => {
   const events = [
@@ -50,7 +51,13 @@ const Timeline: React.FC = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                <motion.div
+                  initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}
+                >
                   <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group`}>
 
                     {event.day && (
@@ -71,7 +78,7 @@ const Timeline: React.FC = () => {
                       </div>
                     )}
                   </div>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
