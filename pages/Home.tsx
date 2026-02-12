@@ -25,7 +25,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           {/* Main Title - Responsive sizing */}
-          <h1 className="text-[5rem] sm:text-7xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter uppercase relative">
+          <h1 className="text-6xl sm:text-7xl md:text-9xl font-black text-white leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center">
             <motion.span
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
             >
               Tink-Her
             </motion.span>
-            <span className="relative inline-block w-full">
+            <span className="relative inline-block w-full flex flex-col items-center md:block md:w-auto">
               <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -43,7 +43,8 @@ const Home: React.FC = () => {
               >
                 Hack 4.0
               </motion.span>
-              {/* Sticker - Mobile Optimized Position */}
+
+              {/* Sticker - Mobile Optimized (Static Flow) */}
               <motion.div
                 initial={{ rotate: 12, scale: 0 }}
                 animate={{
@@ -55,10 +56,10 @@ const Home: React.FC = () => {
                   scale: { duration: 0.5, type: "spring" },
                   default: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute right-0 -bottom-14 md:-right-44 md:-top-32 z-50 block w-full flex justify-end md:w-auto"
+                className="relative mt-8 mb-4 md:absolute md:-right-44 md:-top-32 md:mt-0 z-50 block w-auto"
               >
-                <div className="bg-white !text-black font-black uppercase text-[10px] md:text-base px-3 py-1.5 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform hover:scale-110 active:scale-95 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-1 md:gap-2 !leading-none !tracking-normal">
-                  <span className="material-symbols-outlined text-sm md:text-xl text-primary">verified</span>
+                <div className="bg-white !text-black font-black uppercase text-xs md:text-base px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform hover:scale-110 active:scale-95 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
+                  <span className="material-symbols-outlined text-base md:text-xl text-primary">verified</span>
                   Beginner Friendly!
                 </div>
               </motion.div>
