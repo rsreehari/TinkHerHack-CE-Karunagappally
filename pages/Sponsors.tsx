@@ -57,7 +57,7 @@ const Sponsors: React.FC = () => {
               {community.map((c, i) => (
                 <div key={i} className="group relative">
                   <div className="bg-white rounded-[2rem] p-6 w-40 h-40 flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-4 border-transparent group-hover:border-primary">
-                    <img className="w-full h-full object-contain" src={c.img} alt={c.name} />
+                    <img className="w-full h-full object-contain invert" src={c.img} alt={c.name} />
                   </div>
                   <div className="text-center">
                     <span className="font-bold uppercase tracking-widest text-sm text-white/90 group-hover:text-white transition-colors">{c.name}</span>
