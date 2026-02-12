@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 border-t border-white/10 pt-10">
         <div className="flex flex-col items-center md:items-start gap-1">
           <span className="text-sm font-medium text-white/70">© 2026 TinkerHub CE Karunagappally</span>
-          <span className="text-xs text-white/40">Made with ❤️ for Her</span>
+          <span className="text-xs text-white/40">Made with ❤️ for Her • Developed by <a href="https://github.com/rsreehari" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline decoration-white/30 hover:decoration-white">Sreehari</a></span>
         </div>
 
         <div className="flex flex-wrap justify-center md:justify-end gap-3">
