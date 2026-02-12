@@ -3,143 +3,125 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
-      {/* Hero Header */}
-      <section className="text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-8">
+    <div className="max-w-7xl mx-auto px-6 py-20 font-display space-y-24">
+      {/* Hero Header - White Section for Contrast */}
+      <section className="bg-white rounded-[3rem] p-12 md:p-20 text-center shadow-xl border-4 border-slate-100">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-300 border-2 border-black text-black text-xs font-bold tracking-widest uppercase mb-8 shadow-[4px_4px_0px_#000]">
           <span className="material-symbols-outlined text-sm">stars</span>
           Empowering Beginners
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] mb-6 uppercase tracking-tighter">
           Redefining Tech for <br />
-          <span className="bg-gradient-to-r from-primary to-[#ff80bf] bg-clip-text text-transparent">Complete Beginners.</span>
+          <span className="text-primary font-script lowercase text-[1.2em] relative inline-block transform -rotate-2 mt-4">
+            everyone
+            <span className="absolute -bottom-2 w-full h-3 bg-yellow-300 -z-10 opacity-50 skew-x-12"></span>
+          </span>
         </h1>
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed">
+        <p className="max-w-3xl mx-auto text-xl md:text-2xl text-slate-600 leading-relaxed font-body">
           Tink-Her-Hack 4.0 is Kerala's flagship women-centric hackathon designed to break barriers. Whether you've never written a line of code or you're a seasoned builder, your journey starts here.
         </p>
       </section>
 
       {/* Grid Section */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        {/* Team Card */}
-        <div className="md:col-span-4 bg-white/5 border border-white/10 backdrop-blur-md p-8 rounded-3xl flex flex-col justify-between group hover:border-primary/50 transition-all duration-300">
+        {/* Team Card - Blue */}
+        <div className="md:col-span-4 bg-secondary text-white border-4 border-black p-8 rounded-[2.5rem] flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-300 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
           <div>
-            <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+            <div className="w-14 h-14 rounded-2xl bg-white text-secondary flex items-center justify-center mb-6 border-2 border-black">
               <span className="material-symbols-outlined text-3xl">groups</span>
             </div>
-            <h3 className="text-2xl font-bold mb-2">Team Size</h3>
-            <p className="text-slate-400 leading-snug mb-8">Bring a friend or find a partner during our pre-event networking. Register as individuals or teams.</p>
+            <h3 className="text-3xl font-black uppercase mb-2">Team Size</h3>
+            <p className="text-white/90 text-lg leading-snug mb-8 font-medium">Bring a friend or find a partner during our pre-event networking.</p>
           </div>
-          <div className="text-4xl font-bold text-primary">1 - 2 <span className="text-base text-slate-500 font-normal">Members</span></div>
+          <div className="text-6xl font-black">1 - 2 <span className="text-xl opacity-80 font-bold block">Members</span></div>
         </div>
 
-        {/* Mode Card */}
-        <div className="md:col-span-8 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl overflow-hidden relative group hover:border-primary/50 transition-all duration-300">
-          <div className="h-full p-8 flex flex-col justify-between z-10">
+        {/* Mode Card - White */}
+        <div className="md:col-span-8 bg-white text-black border-4 border-black rounded-[2.5rem] overflow-hidden relative group hover:-translate-y-2 transition-transform duration-300 shadow-[8px_8px_0px_#FF1493]">
+          <div className="h-full p-10 flex flex-col justify-between z-10 relative">
             <div>
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-primary">
-                <span className="material-symbols-outlined text-3xl">location_on</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Mode & Venue</h3>
-              <p className="text-slate-400 mb-6">Hosted at College Of Engineering Karunagappally to provide a safe and inclusive space to innovate.</p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary">apartment</span>
-                  <span className="font-medium">College Of Engineering Karunagappally</span>
+              <div className="flex justify-between items-start">
+                <div className="w-14 h-14 rounded-2xl bg-yellow-300 text-black flex items-center justify-center mb-6 border-2 border-black">
+                  <span className="material-symbols-outlined text-3xl">location_on</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary">meeting_room</span>
-                  <span className="font-medium text-slate-500">Offline Participation</span>
+                <span className="bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Offline</span>
+              </div>
+
+              <h3 className="text-4xl font-black uppercase mb-4">Mode & Venue</h3>
+              <p className="text-slate-600 text-lg mb-8 max-w-lg font-medium">Hosted at College Of Engineering Karunagappally to provide a safe and inclusive space to innovate.</p>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border-2 border-slate-100">
+                  <span className="material-symbols-outlined text-primary text-3xl">apartment</span>
+                  <span className="font-bold text-lg">College Of Engineering Karunagappally</span>
                 </div>
               </div>
             </div>
             <div className="mt-8">
               <a
-                className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 font-black text-lg hover:gap-4 transition-all uppercase tracking-wide border-b-4 border-primary pb-1"
                 href="https://maps.app.goo.gl/hfzQmCcru8n4RuxY6"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open in Google Maps <span className="material-symbols-outlined">arrow_right_alt</span>
+                Get Directions <span className="material-symbols-outlined">arrow_right_alt</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Tailored Card */}
-        <div className="md:col-span-7 bg-white/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
-          <div className="relative z-10">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                <span className="material-symbols-outlined text-3xl">school</span>
-              </div>
-              <h3 className="text-3xl font-bold tracking-tight italic">Tailored for Beginners</h3>
+        {/* Tailored Card - Pink */}
+        <div className="md:col-span-12 bg-primary text-white border-4 border-black p-12 rounded-[3rem] relative overflow-hidden shadow-[12px_12px_0px_#4169E1]">
+          <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1 space-y-6">
+              <div className="inline-block bg-white text-primary px-4 py-1.5 rounded-full font-bold uppercase tracking-wider text-sm border-2 border-black">For Everyone</div>
+              <h3 className="text-5xl md:text-6xl font-black uppercase leading-[0.9]">Tailored for <br /><span className="font-script text-yellow-300 lowercase">beginners</span></h3>
+              <p className="text-xl font-medium text-white/90 leading-relaxed">We provide dedicated mentors to help you setup and build your first project. A non-competitive atmosphere focused on learning.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: "No Code Experience?", desc: "We provide dedicated mentors to help you setup and build your first project." },
-
-                { title: "Supportive Environment", desc: "A non-competitive atmosphere focused on learning and community." },
-
-              ].map((item, idx) => (
-                <div key={idx} className="space-y-2">
-                  <h4 className="font-bold text-white flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary"></span>
-                    {item.title}
-                  </h4>
-                  <p className="text-slate-400 text-sm">{item.desc}</p>
+                { title: "Mentorship", icon: "school" },
+                { title: "Workshops", icon: "handyman" },
+                { title: "Networking", icon: "hub" },
+                { title: "Fun Games", icon: "sports_esports" }
+              ].map((item, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur-sm border-2 border-white/20 p-6 rounded-2xl flex items-center gap-4 hover:bg-white/20 transition-colors">
+                  <span className="material-symbols-outlined text-3xl text-yellow-300">{item.icon}</span>
+                  <span className="text-xl font-bold">{item.title}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
-        {/* CTA Box */}
-        <div className="md:col-span-5 bg-primary/10 border border-primary/20 p-10 rounded-3xl flex flex-col justify-center items-center text-center group">
-          <div className="text-7xl font-black text-primary mb-2">18h</div>
-          <div className="text-xl font-bold uppercase tracking-widest text-slate-300">Of Non-Stop Innovation</div>
-          <div className="w-16 h-1 bg-primary/30 my-6 rounded-full"></div>
-          <p className="text-slate-400 text-sm">Food, caffeine, and endless learning provided.</p>
-          <a
-            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 w-full py-5 bg-primary text-white rounded-2xl font-black text-lg shadow-lg hover:translate-y-[-2px] transition-all block"
-          >
-            SECURE YOUR SPOT
-          </a>
-        </div>
       </section>
 
       {/* Breaking Barriers section */}
-      <section className="py-20 border-t border-white/5">
-        <div className="flex flex-col md:flex-row items-center gap-16">
+      <section className="py-20">
+        <div className="flex flex-col md:flex-row items-center gap-16 bg-white rounded-[3rem] p-12 border-4 border-black shadow-[12px_12px_0px_#000]">
           <div className="flex-1 space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">Breaking Barriers, <br /> One Line at a Time.</h2>
-            <p className="text-slate-400 text-lg leading-relaxed">
-              Tink-Her-Hack was born from a simple observation: the gender gap in tech isn't about ability, but accessibility. We create a safe space for women and non-binary students to experiment, fail, and succeed together.
+            <h2 className="text-5xl md:text-6xl font-black uppercase leading-none">Breaking Barriers,<br /><span className="text-primary">One Line</span> at a Time.</h2>
+            <p className="text-slate-600 text-xl leading-relaxed font-medium">
+              Tink-Her-Hack was born from a simple observation: the gender gap in tech isn't about ability, but accessibility. We create a safe space for women and non-binary students.
             </p>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 border-l-2 border-primary bg-primary/5">
-                <div className="text-4xl font-bold">6000+</div>
-                <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Women in Tech</div>
+            <div className="flex gap-12 pt-8">
+              <div>
+                <div className="text-6xl font-black text-secondary">6000+</div>
+                <div className="font-bold text-slate-400 uppercase tracking-widest">Women Impacted</div>
               </div>
-              <div className="p-6 border-l-2 border-primary bg-primary/5">
-                <div className="text-4xl font-bold">1800+</div>
-                <div className="text-xs uppercase text-slate-500 font-bold tracking-widest">Projects</div>
+              <div>
+                <div className="text-6xl font-black text-primary">1800+</div>
+                <div className="font-bold text-slate-400 uppercase tracking-widest">Projects Built</div>
               </div>
             </div>
           </div>
-          <div className="flex-1 relative">
-            <div className="aspect-square bg-white/5 border border-white/10 p-4 rotate-3 hover:rotate-0 transition-transform duration-500 rounded-3xl">
+          <div className="flex-1 relative w-full">
+            <div className="aspect-square bg-slate-100 rounded-[2.5rem] border-4 border-black p-4 rotate-3 shadow-[8px_8px_0px_#FFD700] hover:rotate-0 transition-all duration-500 overflow-hidden">
               <img
                 alt="Women in tech"
-                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtBYal6PPsuqN4U_mFqWYKGMvqJZzzsWNO38XeRq37_iUzsJ4Jy4FSSsnN08gQ1wlWhg1-vPpFHXYD9HDjjseGU1W0bsa-2MLofJ32PSdQBfaULPloAeCDmyLnNr9tcx23FhvadJVuF1GRHWWclAz--D7IIcG-Zpg3Hw4lnE4lR19QnFWnE6yxkClGEZHUv8nxQrn8ddxVn6V_ZClWgkymYMGRLomeuzlPHp-4vAKd8FAj7KwI2X8eq3XTDbh7Wsu5TAXoa0FVzddv"
+                className="w-full h-full object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-500"
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
               />
             </div>
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary opacity-50"></div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary opacity-50"></div>
           </div>
         </div>
       </section>

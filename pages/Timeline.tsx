@@ -4,116 +4,95 @@ import React from 'react';
 const Timeline: React.FC = () => {
   const events = [
     { time: "Now", title: "Registration Open", desc: "Secure your spot immediately! Limited seats available.", align: 'bottom', active: true },
-    { time: "05:00 PM (Feb 20)", title: "Arrival & Registration", desc: "Venue opens. Check-in and get ready for an overnight sprint.", align: 'top' },
-    { time: "05:30 PM", title: "Opening Ceremony", desc: "Welcome address and problem statement brief.", align: 'bottom' },
-    { time: "06:00 PM", title: "Hacking Begins", desc: "The 18-hour overnight hackathon kicks off!", align: 'top' },
-    { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel with food and get first-round feedback.", align: 'bottom' },
-    { time: "01:00 AM (Feb 21)", title: "Midnight Fun", desc: "Break the ice with games and energy boosters.", align: 'top' },
-    { time: "08:00 AM", title: "Breakfast & Coding", desc: "Morning recharge. Final lap of development.", align: 'bottom' },
-    { time: "12:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit your projects on the app.", align: 'top' },
-    { time: "01:00 PM", title: "Judging", desc: "Project demos and announcement of winners.", align: 'bottom', icon: 'emoji_events' }
+    { time: "05:00 PM", title: "Arrival & Registration", desc: "Venue opens. Check-in and get ready.", align: 'top', day: "Feb 20" },
+    { time: "05:30 PM", title: "Opening Ceremony", desc: "Welcome address and brief.", align: 'bottom' },
+    { time: "06:00 PM", title: "Hacking Begins", desc: "The 18-hour sprint kicks off!", align: 'top' },
+    { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel and get feedback.", align: 'bottom' },
+    { time: "01:00 AM", title: "Midnight Fun", desc: "Games and energy boosters.", align: 'top', day: "Feb 21" },
+    { time: "08:00 AM", title: "Breakfast", desc: "Morning recharge.", align: 'bottom' },
+    { time: "12:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit projects.", align: 'top' },
+    { time: "01:00 PM", title: "Judging & Closing", desc: "Demos and winners.", align: 'bottom', icon: 'emoji_events' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#230f1a] to-background-dark overflow-x-hidden">
-      <section className="py-20 px-6 text-center max-w-4xl mx-auto">
-        <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-4">18-Hour Sprint</span>
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">The Journey of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Innovation</span></h1>
-        <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-          Navigate through the cosmos of creativity. From the first spark of an idea to the final pitch, witness the evolution of 400+ hackers.
+    <div className="min-h-screen bg-white font-display overflow-x-hidden">
+      {/* Header */}
+      <section className="py-24 px-6 text-center max-w-5xl mx-auto">
+        <span className="inline-block py-2 px-5 rounded-full bg-secondary text-white border-2 border-black text-sm font-bold tracking-widest uppercase mb-6 shadow-[4px_4px_0px_#000]">18-Hour Sprint</span>
+        <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-6 uppercase leading-[0.9]">
+          The Journey of <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary relative inline-block">
+            Innovation
+            <svg className="absolute w-full h-6 -bottom-1 left-0 text-yellow-300 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="6" fill="none" />
+            </svg>
+          </span>
+        </h1>
+        <p className="text-slate-600 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed">
+          Navigate through the cosmos of creativity. From the first spark of an idea to the final pitch.
         </p>
       </section>
 
       {/* Roadmap Section */}
-      <section className="relative w-full pb-32">
-        <div className="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
-          <div>
-            <h3 className="text-2xl font-bold">Event Roadmap</h3>
-            <p className="text-primary text-sm font-medium">Stage 3: Deep Hacking in progress</p>
-          </div>
-          <div className="text-right">
-            <p className="text-slate-500 text-sm mb-2 uppercase tracking-widest font-bold">Total Duration</p>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl font-black">18</span>
-              <span className="text-slate-500 text-xs text-left leading-tight uppercase font-bold">Hours of<br />Code</span>
-            </div>
-          </div>
-        </div>
-
+      <section className="relative w-full pb-32 bg-slate-50 border-y-4 border-black">
         {/* Scrollable Track */}
-        <div className="overflow-x-auto pb-12 cursor-grab active:cursor-grabbing px-[10%] relative">
-          <div className="absolute h-1 bg-primary/20 w-[3000px] top-1/2 -translate-y-1/2 z-0"></div>
-          <div className="absolute h-1 bg-gradient-to-r from-primary to-secondary w-[1200px] top-1/2 -translate-y-1/2 z-0 shadow-[0_0_20px_rgba(249,26,145,0.6)]"></div>
+        <div className="overflow-x-auto pb-12 cursor-grab active:cursor-grabbing px-[5%] relative pt-20 hide-scrollbar">
 
-          <div className="flex gap-40 relative z-10 pr-64 py-32">
+          {/* Central Line */}
+          <div className="absolute h-4 bg-black w-[2500px] top-1/2 -translate-y-1/2 z-0 rounded-full"></div>
+
+          <div className="flex gap-20 relative z-10 py-20 px-10 w-max mx-auto">
             {events.map((event, idx) => (
-              <div key={idx} className="relative flex flex-col items-center min-w-[300px]">
-                {event.align === 'top' && (
-                  <div className={`bg-[#2b0f1d66] backdrop-blur-md p-6 rounded-2xl w-72 mb-12 transform hover:-translate-y-2 transition-transform shadow-2xl border ${event.active ? 'border-primary ring-4 ring-primary/10' : 'border-white/10'}`}>
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="text-primary font-bold text-xs">{event.time}</span>
-                      {event.active && <span className="material-symbols-outlined text-primary text-sm animate-pulse">sensors</span>}
-                    </div>
-                    <h4 className="text-lg font-bold">{event.title}</h4>
-                    <p className="text-sm text-slate-400 mt-2">{event.desc}</p>
-                  </div>
-                )}
+              <div key={idx} className="relative flex flex-col items-center w-[280px]">
 
-                <div className={`size-6 rounded-full border-4 border-background-dark relative ${event.active ? 'bg-white scale-125 animate-pulse' : 'bg-primary'} shadow-[0_0_15px_rgba(249,26,145,0.8)]`}>
-                  {event.active && (
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-0.5 rounded font-bold whitespace-nowrap">YOU ARE HERE</div>
-                  )}
-                  {event.icon && (
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-primary">
-                      <span className="material-symbols-outlined text-xl">{event.icon}</span>
+                {/* Top Card */}
+                <div className={`transition-all duration-300 w-full ${event.align === 'top' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[8px_8px_0px_#4169E1] hover:-translate-y-2 transition-transform duration-300 h-[180px] flex flex-col justify-between mb-8 relative group`}>
+                    {event.day && <span className="absolute -top-4 -right-4 bg-yellow-300 text-black border-2 border-black px-3 py-1 text-xs font-bold uppercase rounded-full transform rotate-12 group-hover:rotate-0 transition-transform">{event.day}</span>}
+                    <div>
+                      <div className="text-primary font-black text-xl mb-1">{event.time.split(' ')[0]} <span className="text-sm text-slate-400">{event.time.split(' ')[1]}</span></div>
+                      <h4 className="text-xl font-bold text-slate-900 leading-tight">{event.title}</h4>
                     </div>
-                  )}
+                    <p className="text-slate-500 font-medium text-sm leading-snug">{event.desc}</p>
+                  </div>
                 </div>
 
-                {event.align === 'bottom' && (
-                  <div className="bg-[#2b0f1d66] backdrop-blur-md p-6 rounded-2xl w-72 mt-12 transform hover:translate-y-2 transition-transform shadow-2xl border border-white/10">
-                    <span className="text-primary font-bold text-xs">{event.time}</span>
-                    <h4 className="text-lg font-bold mt-1">{event.title}</h4>
-                    <p className="text-sm text-slate-400 mt-2">{event.desc}</p>
+                {/* Timeline Node */}
+                <div className={`w-10 h-10 rounded-full border-4 border-black relative z-10 transition-all duration-300 ${event.active ? 'bg-primary scale-125' : 'bg-white hover:scale-110'}`}>
+                  {event.active && <div className="absolute -inset-2 rounded-full border-2 border-primary animate-ping opacity-20"></div>}
+                </div>
+
+                {/* Bottom Card */}
+                <div className={`transition-all duration-300 w-full ${event.align === 'bottom' ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[8px_8px_0px_#FF1493] hover:-translate-y-2 transition-transform duration-300 h-[180px] flex flex-col justify-between mt-8 relative group`}>
+                    {event.icon && <span className="absolute -bottom-4 -right-4 bg-black text-white p-3 rounded-full flex items-center justify-center transform -rotate-12"><span className="material-symbols-outlined">{event.icon}</span></span>}
+                    <div>
+                      <div className="text-secondary font-black text-xl mb-1">{event.time.split(' ')[0]} <span className="text-sm text-slate-400">{event.time.split(' ')[1]}</span></div>
+                      <h4 className="text-xl font-bold text-slate-900 leading-tight">{event.title}</h4>
+                    </div>
+                    <p className="text-slate-500 font-medium text-sm leading-snug">{event.desc}</p>
                   </div>
-                )}
+                </div>
+
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-3 text-slate-500 text-xs font-bold tracking-widest uppercase">
-            <span className="material-symbols-outlined animate-bounce">chevron_left</span>
-            Drag to explore the timeline
-            <span className="material-symbols-outlined animate-bounce">chevron_right</span>
           </div>
         </div>
       </section>
 
       {/* CTA section */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
-        <div className="bg-white/5 border border-white/10 p-12 rounded-3xl text-center relative overflow-hidden backdrop-blur-xl">
-          <div className="absolute top-0 right-0 p-8 opacity-10">
-            <span className="material-symbols-outlined text-[10rem]">rocket_launch</span>
-          </div>
-          <h2 className="text-4xl font-bold mb-4">Ready to hack?</h2>
-          <p className="text-slate-400 mb-8 max-w-xl mx-auto">Registration for Tink-Her-Hack 4.0 is closing soon. Don't miss your chance to be part of South India's largest women-centric hackathon.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-            <a
-              href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/20 transition-all text-center inline-block"
-            >
-              Join the Revolution
+      <section className="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div className="bg-yellow-300 border-4 border-black p-12 md:p-16 rounded-[3rem] relative shadow-[12px_12px_0px_#000]">
+          <h2 className="text-5xl font-black uppercase mb-6 text-black">Ready to Hack?</h2>
+          <p className="text-xl font-bold text-black/80 mb-10 max-w-lg mx-auto">Don't miss South India's largest women-centric hackathon.</p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-xl font-bold px-10 py-4 rounded-xl shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-transparent">
+              REGISTER NOW
             </a>
-            <a
-              href="/THH_PPT.pdf"
-              download="THH_Guide.pdf"
-              className="bg-white/10 hover:bg-white/20 border border-white/10 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center"
-            >
-              Download Guide
+            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-xl font-bold px-10 py-4 rounded-xl border-4 border-black hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+              <span className="material-symbols-outlined">download</span>
+              VIEW GUIDE
             </a>
           </div>
         </div>
