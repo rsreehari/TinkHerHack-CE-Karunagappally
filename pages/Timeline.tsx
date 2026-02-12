@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Timeline: React.FC = () => {
   const events = [
@@ -14,6 +14,14 @@ const Timeline: React.FC = () => {
     { time: "12:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit projects.", align: 'top' },
     { time: "01:00 PM", title: "Judging & Closing", desc: "Demos and winners.", align: 'bottom', icon: 'emoji_events' }
   ];
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div className="min-h-screen bg-white font-display overflow-x-hidden">
@@ -32,11 +40,17 @@ const Timeline: React.FC = () => {
       </section>
 
       {/* Vertical Timeline Section */}
-      <section className="relative w-full pb-24 px-4 md:px-0 bg-slate-50 border-y-4 border-black">
+      <section className="relative w-full pb-24 px-4 md:px-0 bg-slate-50 border-y-4 border-black" ref={containerRef}>
         <div className="max-w-4xl mx-auto relative pt-12 md:pt-20">
 
-          {/* Vertical Central Line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-black transform md:-translate-x-1/2 z-0"></div>
+          {/* Vertical Central Line Wrapper */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-slate-200 transform md:-translate-x-1/2 z-0 rounded-full overflow-hidden">
+            {/* Dynamic Line Fill */}
+            <motion.div
+              style={{ height: lineHeight }}
+              className="w-full bg-black origin-top absolute top-0 left-0"
+            />
+          </div>
 
           <div className="flex flex-col gap-12 relative z-10 pb-12">
             {events.map((event, idx) => (
@@ -46,16 +60,21 @@ const Timeline: React.FC = () => {
                 <div className="hidden md:block w-1/2"></div>
 
                 {/* Timeline Dot */}
-                <div className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 transition-all duration-300 ${event.active ? 'bg-primary scale-110' : 'bg-white'}`}>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 transition-all duration-300 ${event.active ? 'bg-primary' : 'bg-white'}`}
+                >
                   {event.active && <div className="absolute -inset-2 rounded-full border-2 border-primary animate-ping opacity-20"></div>}
-                </div>
+                </motion.div>
 
                 {/* Content Card */}
                 <motion.div
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
                   className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}
                 >
                   <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group`}>
