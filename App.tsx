@@ -1,49 +1,44 @@
-
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Timeline from './pages/Timeline';
-import Projects from './pages/Projects';
 import Sponsors from './pages/Sponsors';
+import Projects from './pages/Projects';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="relative z-10 min-h-screen flex flex-col bg-background-dark overflow-x-hidden">
-        {/* Persistent Background Effects */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="berry-glow-1 absolute -top-24 -left-24 w-[600px] h-[600px] rounded-full blur-3xl opacity-40"></div>
-          <div className="blue-glow absolute top-1/2 -right-48 w-[800px] h-[800px] rounded-full blur-3xl opacity-30"></div>
-          <div className="glow-overlay absolute inset-0"></div>
-        </div>
+    <div className="bg-background-dark min-h-screen text-white font-body selection:bg-pink-500 selection:text-white">
+      <Navbar />
 
-        <Navbar />
-
-        <main className="flex-grow relative z-10">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/timeline" element={<Timeline />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/sponsors" element={<Sponsors />} />
-          </Routes>
-        </main>
-
-        <Footer />
+      {/* GLOBAL BACKGROUND EFFECTS - Kept for depth */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full animate-float"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
-    </Router>
+
+      <main className="relative z-10">
+        {/* Render all sections in a single scrollable page */}
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="timeline">
+          <Timeline />
+        </section>
+        <section id="sponsors">
+          <Sponsors />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
