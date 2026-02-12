@@ -119,8 +119,8 @@ const Home: React.FC = () => {
             </div>
             <div className="mt-12">
               <span className="font-bold uppercase tracking-widest opacity-80 mb-2 block">Opportunity</span>
-              <div className="text-5xl font-black mb-1">100%</div>
-              <div className="font-script text-2xl">Scholarships</div>
+              <div className="text-3xl md:text-5xl font-black mb-1 leading-none">Top Projects</div>
+              <div className="font-script text-2xl">Get Sponsorship</div>
             </div>
           </div>
         </div>

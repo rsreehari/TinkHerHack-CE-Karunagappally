@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
 
 
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-          <span className="text-xs font-medium text-slate-500">© 2025 TinkerHub CE Karunagappally</span>
-          <a className="text-xs font-medium text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
-          <a className="text-xs font-medium text-slate-500 hover:text-primary transition-colors" href="#">Contact Us</a>
+          <span className="text-sm font-medium text-white/70">© 2025 TinkerHub CE Karunagappally</span>
+          <a className="text-sm font-medium text-white/70 hover:text-white transition-colors underline decoration-white/30 hover:decoration-white" href="#">Privacy Policy</a>
+          <a className="text-sm font-medium text-white/70 hover:text-white transition-colors underline decoration-white/30 hover:decoration-white" href="#">Contact Us</a>
         </div>
 
         <div className="flex items-center gap-4">
