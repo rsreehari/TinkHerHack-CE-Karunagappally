@@ -17,63 +17,61 @@ const Timeline: React.FC = () => {
   return (
     <div className="min-h-screen bg-white font-display overflow-x-hidden">
       {/* Header */}
-      <section className="py-24 px-6 text-center max-w-5xl mx-auto">
-        <span className="inline-block py-2 px-5 rounded-full bg-secondary text-white border-2 border-black text-sm font-bold tracking-widest uppercase mb-6 shadow-[4px_4px_0px_#000]">18-Hour Sprint</span>
-        <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-6 uppercase leading-[0.9]">
+      <section className="py-20 px-6 text-center max-w-5xl mx-auto">
+        <span className="inline-block py-2 px-5 rounded-full bg-secondary text-white border-2 border-black text-xs md:text-sm font-bold tracking-widest uppercase mb-6 shadow-[4px_4px_0px_#000]">18-Hour Sprint</span>
+        <h1 className="text-5xl md:text-8xl font-black text-slate-900 mb-6 uppercase leading-[0.9]">
           The Journey of <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary relative inline-block">
             Innovation
-            <svg className="absolute w-full h-6 -bottom-1 left-0 text-yellow-300 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <svg className="absolute w-full h-4 md:h-6 -bottom-1 left-0 text-yellow-300 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="6" fill="none" />
             </svg>
           </span>
         </h1>
-        <p className="text-slate-600 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed">
-          Navigate through the cosmos of creativity. From the first spark of an idea to the final pitch.
-        </p>
       </section>
 
-      {/* Roadmap Section */}
-      <section className="relative w-full pb-32 bg-slate-50 border-y-4 border-black">
-        {/* Scrollable Track */}
-        <div className="overflow-x-auto pb-12 cursor-grab active:cursor-grabbing px-[5%] relative pt-20 hide-scrollbar">
+      {/* Vertical Timeline Section */}
+      <section className="relative w-full pb-24 px-4 md:px-0 bg-slate-50 border-y-4 border-black">
+        <div className="max-w-4xl mx-auto relative pt-12 md:pt-20">
 
-          {/* Central Line */}
-          <div className="absolute h-4 bg-black w-[2500px] top-1/2 -translate-y-1/2 z-0 rounded-full"></div>
+          {/* Vertical Central Line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-black transform md:-translate-x-1/2 z-0"></div>
 
-          <div className="flex gap-20 relative z-10 py-20 px-10 w-max mx-auto">
+          <div className="flex flex-col gap-12 relative z-10 pb-12">
             {events.map((event, idx) => (
-              <div key={idx} className="relative flex flex-col items-center w-[280px]">
+              <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
 
-                {/* Top Card */}
-                <div className={`transition-all duration-300 w-full ${event.align === 'top' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[8px_8px_0px_#4169E1] hover:-translate-y-2 transition-transform duration-300 h-[180px] flex flex-col justify-between mb-8 relative group`}>
-                    {event.day && <span className="absolute -top-4 -right-4 bg-yellow-300 text-black border-2 border-black px-3 py-1 text-xs font-bold uppercase rounded-full transform rotate-12 group-hover:rotate-0 transition-transform">{event.day}</span>}
-                    <div>
-                      <div className="text-primary font-black text-xl mb-1">{event.time.split(' ')[0]} <span className="text-sm text-slate-400">{event.time.split(' ')[1]}</span></div>
-                      <h4 className="text-xl font-bold text-slate-900 leading-tight">{event.title}</h4>
-                    </div>
-                    <p className="text-slate-500 font-medium text-sm leading-snug">{event.desc}</p>
-                  </div>
-                </div>
+                {/* Desktop: Spacer to push content to one side */}
+                <div className="hidden md:block w-1/2"></div>
 
-                {/* Timeline Node */}
-                <div className={`w-10 h-10 rounded-full border-4 border-black relative z-10 transition-all duration-300 ${event.active ? 'bg-primary scale-125' : 'bg-white hover:scale-110'}`}>
+                {/* Timeline Dot */}
+                <div className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 transition-all duration-300 ${event.active ? 'bg-primary scale-110' : 'bg-white'}`}>
                   {event.active && <div className="absolute -inset-2 rounded-full border-2 border-primary animate-ping opacity-20"></div>}
                 </div>
 
-                {/* Bottom Card */}
-                <div className={`transition-all duration-300 w-full ${event.align === 'bottom' ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
-                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[8px_8px_0px_#FF1493] hover:-translate-y-2 transition-transform duration-300 h-[180px] flex flex-col justify-between mt-8 relative group`}>
-                    {event.icon && <span className="absolute -bottom-4 -right-4 bg-black text-white p-3 rounded-full flex items-center justify-center transform -rotate-12"><span className="material-symbols-outlined">{event.icon}</span></span>}
-                    <div>
-                      <div className="text-secondary font-black text-xl mb-1">{event.time.split(' ')[0]} <span className="text-sm text-slate-400">{event.time.split(' ')[1]}</span></div>
-                      <h4 className="text-xl font-bold text-slate-900 leading-tight">{event.title}</h4>
+                {/* Content Card */}
+                <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group`}>
+
+                    {event.day && (
+                      <span className={`absolute -top-3 ${idx % 2 === 0 ? 'right-4 md:left-4 md:right-auto' : 'right-4'} bg-yellow-300 text-black border-2 border-black px-3 py-1 text-[10px] md:text-xs font-bold uppercase rounded-full`}>
+                        {event.day}
+                      </span>
+                    )}
+
+                    <div className="mb-2">
+                      <div className="text-secondary font-black text-lg md:text-xl mb-1">{event.time}</div>
+                      <h4 className="text-lg md:text-2xl font-bold text-slate-900 leading-tight">{event.title}</h4>
                     </div>
-                    <p className="text-slate-500 font-medium text-sm leading-snug">{event.desc}</p>
+                    <p className="text-slate-500 font-medium text-sm md:text-base leading-snug">{event.desc}</p>
+
+                    {event.icon && (
+                      <div className="absolute -bottom-3 -right-3 bg-black text-white p-2 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="material-symbols-outlined text-lg">{event.icon}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
@@ -81,16 +79,16 @@ const Timeline: React.FC = () => {
       </section>
 
       {/* CTA section */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div className="bg-yellow-300 border-4 border-black p-12 md:p-16 rounded-[3rem] relative shadow-[12px_12px_0px_#000]">
-          <h2 className="text-5xl font-black uppercase mb-6 text-black">Ready to Hack?</h2>
-          <p className="text-xl font-bold text-black/80 mb-10 max-w-lg mx-auto">Don't miss South India's largest women-centric hackathon.</p>
+      <section className="py-16 md:py-24 px-6 max-w-4xl mx-auto text-center">
+        <div className="bg-yellow-300 border-4 border-black p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] relative shadow-[8px_8px_0px_#000] md:shadow-[12px_12px_0px_#000]">
+          <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 md:mb-6 text-black">Ready to Hack?</h2>
+          <p className="text-lg md:text-xl font-bold text-black/80 mb-8 max-w-lg mx-auto">Don't miss South India's largest women-centric hackathon.</p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-xl font-bold px-10 py-4 rounded-xl shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-transparent">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+            <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-transparent">
               REGISTER NOW
             </a>
-            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-xl font-bold px-10 py-4 rounded-xl border-4 border-black hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl border-4 border-black hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
               <span className="material-symbols-outlined">download</span>
               VIEW GUIDE
             </a>
