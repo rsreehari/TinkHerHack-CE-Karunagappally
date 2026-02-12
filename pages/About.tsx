@@ -81,9 +81,8 @@ const About: React.FC = () => {
             <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { title: "Mentorship", icon: "school" },
-                { title: "Workshops", icon: "handyman" },
                 { title: "Networking", icon: "hub" },
-                { title: "Fun Games", icon: "sports_esports" }
+                { title: "Fun Activities", icon: "sports_esports" }
               ].map((item, i) => (
                 <div key={i} className="bg-white/10 backdrop-blur-sm border-2 border-white/20 p-6 rounded-2xl flex items-center gap-4 hover:bg-white/20 transition-colors">
                   <span className="material-symbols-outlined text-3xl text-yellow-300">{item.icon}</span>
