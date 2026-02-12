@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sponsors: React.FC = () => {
-  const sponsors = Array(2).fill({ name: "Partner", logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIEHUYZV0HT_UuBQCH55cA4BsA5r2QYC47t8zkIWYttm6zKBWhMzHOQ-5uBX4LpYziAYwl4UUhMCIwxRIzahLd5npYetp9fEfjC1hVhxI5bLpaEcAdZNjD1GZnxasP5-VYjZnXO6DAQn4MJFZPW3gQ6j77-oCnyz-BVL95GeNSUsIECf1r3XmxHsixMQr_F34byVDm6qhh_hwn4GcTpxTqYOjHzzg1N34kJ3MV59wWRmq5QGLaMybWmbcVEpMxAD6RiRpyj0tQOpZ2" });
+  const sponsors = Array(1).fill({ name: "Partner", logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIEHUYZV0HT_UuBQCH55cA4BsA5r2QYC47t8zkIWYttm6zKBWhMzHOQ-5uBX4LpYziAYwl4UUhMCIwxRIzahLd5npYetp9fEfjC1hVhxI5bLpaEcAdZNjD1GZnxasP5-VYjZnXO6DAQn4MJFZPW3gQ6j77-oCnyz-BVL95GeNSUsIECf1r3XmxHsixMQr_F34byVDm6qhh_hwn4GcTpxTqYOjHzzg1N34kJ3MV59wWRmq5QGLaMybWmbcVEpMxAD6RiRpyj0tQOpZ2" });
 
   const community = [
     { name: "Tech Ladies", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBtcoC2MxElbHzy9dI6aaiE4yuiKeL7Y6TN6stwPNCsb5SGumoEkzfGwSIkF5rV_kDxFQ5jq-f9XYFA8LXVbVTMjsrBZthimHUzuPgbFe_vAcg32STY7u2S2AfbkrB3koZGrqQ9Fd2_sMsJH9WsxGPdJxKt-IVPBPrPeJNilhp-QCDmMXQz2WToEiLpck2PqWsJ-g-pLYVRQDSTEavtEkiTvzEUyu0R9kg2DvFf2WApoeTgxxYxGSW4O_6mRdIVdYO5p0NjssxrTpQd" },
@@ -53,7 +53,7 @@ const Sponsors: React.FC = () => {
               <span className="font-script text-2xl text-yellow-300 pb-2">Friends</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {community.map((c, i) => (
                 <div key={i} className="group relative">
                   <div className="bg-surface-highlight rounded-[2rem] p-8 aspect-square flex items-center justify-center mb-4 transition-all duration-300 hover:rotate-3 shadow-lg border-2 border-white/10 group-hover:border-primary">
