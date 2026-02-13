@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -76,9 +77,23 @@ const Footer: React.FC = () => {
           >
             <span className="text-white/60 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
             <div className="relative">
-              <span className="font-script text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-300 to-yellow-400 md:group-hover:from-yellow-400 md:group-hover:via-cyan-300 md:group-hover:to-white active:from-yellow-400 active:via-cyan-300 active:to-white transition-all duration-500 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.5)] pb-1 block transform -rotate-2 md:group-hover:rotate-0 active:rotate-0 filter brightness-110">
+              <motion.span
+                animate={{
+                  y: [0, -5, 0],
+                  rotate: [-2, 2, -2],
+                  filter: ["brightness(1)", "brightness(1.3)", "brightness(1)"],
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{ backgroundSize: "300% 300%" }}
+                className="font-script text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-pink-400 to-yellow-400 pb-1 block drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]"
+              >
                 Sreehari
-              </span>
+              </motion.span>
               <svg className="absolute w-[120%] h-4 -bottom-3 -left-2 text-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
               </svg>
