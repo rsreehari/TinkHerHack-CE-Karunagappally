@@ -68,12 +68,16 @@ const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 border-t border-white/10 pt-10">
         <div className="flex flex-col items-center md:items-start gap-1">
           <span className="text-sm font-medium text-white/70">© 2026 TinkerHub CE Karunagappally</span>
-          <span className="text-white font-bold flex items-center gap-1.5 transition-all text-base tracking-wide mt-1">
-            Crafted by
-            <a href="https://github.com/rsreehari" target="_blank" rel="noopener noreferrer" className="font-script text-2xl md:text-3xl text-yellow-300 hover:text-white transition-colors transform hover:scale-110 inline-block px-1 drop-shadow-md">
-              Sreehari
-            </a>
-          </span>
+          <a
+            href="https://github.com/rsreehari"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 px-6 py-2 mt-3 rounded-full bg-black/40 border border-white/10 hover:border-primary/50 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,20,147,0.4)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            <span className="text-white/70 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
+            <span className="font-script text-2xl text-primary group-hover:text-pink-300 transition-colors pb-1 drop-shadow-sm">R Sreehari</span>
+          </a>
         </div>
 
         <div className="flex flex-wrap justify-center md:justify-end gap-3">
