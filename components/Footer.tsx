@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center md:items-start gap-1">
           <span className="text-sm font-medium text-white/70">© 2026 TinkerHub CE Karunagappally</span>
           <a
-            href="https://github.com/rsreehari"
+            href="https://linktr.ee/rsreehari.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex p-[2px] mt-3 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300"
