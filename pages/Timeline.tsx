@@ -1,7 +1,6 @@
-
 import React, { useRef } from 'react';
 import confetti from 'canvas-confetti';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const Timeline: React.FC = () => {
   const events = [
@@ -19,10 +18,16 @@ const Timeline: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end center"]
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  const lineHeight = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div className="min-h-screen bg-white font-display overflow-x-hidden">
@@ -60,21 +65,9 @@ const Timeline: React.FC = () => {
                 {/* Desktop: Spacer */}
                 <div className="hidden md:block w-1/2"></div>
 
-                {/* Timeline Dot */}
-                <motion.div
-                  initial={{ scale: 0, backgroundColor: "#fff" }}
-                  whileInView={{ scale: 1, backgroundColor: "#FF1493" }}
-                  viewport={{ once: true, margin: "-40% 0px -40% 0px" }}
-                  transition={{ duration: 0.4 }}
-                  onClick={() => idx === events.length - 1 && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
-                  className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 cursor-pointer hover:scale-110 shadow-lg`}
-                >
-                  {event.active && <div className="absolute -inset-2 rounded-full border-2 border-primary animate-ping opacity-20"></div>}
-                </motion.div>
-
                 {/* Line Mask for Last Item */}
                 {idx === events.length - 1 && (
-                  <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 top-1/2 w-4 md:w-6 h-[1000px] bg-slate-50 z-10 pointer-events-none" />
+                  <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 top-1/2 w-4 md:w-6 h-[500px] bg-slate-50 z-10 pointer-events-none" />
                 )}
 
                 {/* Content Card */}
@@ -116,7 +109,7 @@ const Timeline: React.FC = () => {
       </section>
 
       {/* CTA section */}
-      <section className="py-16 md:py-24 px-6 max-w-4xl mx-auto text-center">
+      <section className="py-16 md:py-24 px-6 max-w-4xl mx-auto text-center relative z-20">
         <div className="bg-yellow-300 border-4 border-black p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] relative shadow-[8px_8px_0px_#000] md:shadow-[12px_12px_0px_#000]">
           <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 md:mb-6 text-black">Ready to Hack?</h2>
           <p className="text-lg md:text-xl font-bold text-black/80 mb-8 max-w-lg mx-auto">Don't miss South India's largest women-centric hackathon.</p>
