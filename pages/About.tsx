@@ -24,10 +24,10 @@ const About: React.FC = () => {
 
       {/* Grid Section */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-        {/* Team Card - Blue */}
-        <div className="md:col-span-4 bg-secondary text-white border-4 border-black p-8 md:p-8 rounded-[2rem] md:rounded-[2.5rem] flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_#000] md:shadow-[8px_8px_0px_#000]">
+        {/* Team Card - Pink */}
+        <div className="md:col-span-4 bg-primary text-white border-4 border-black p-8 md:p-8 rounded-[2rem] md:rounded-[2.5rem] flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_#000] md:shadow-[8px_8px_0px_#000]">
           <div>
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white text-secondary flex items-center justify-center mb-4 md:mb-6 border-2 border-black">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white text-primary flex items-center justify-center mb-4 md:mb-6 border-2 border-black">
               <span className="material-symbols-outlined text-2xl md:text-3xl">groups</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-black uppercase mb-2">Team Size</h3>
