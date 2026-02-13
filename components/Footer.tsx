@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative z-10">
           {/* General Inquiry */}
           <a href="mailto:thceknpy@gmail.com" className="block group">
-            <div className="bg-white text-black h-full rounded-2xl p-4 md:p-5 hover:-translate-y-1 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+            <div className="bg-white text-black h-full rounded-2xl p-4 md:p-5 md:hover:-translate-y-1 active:scale-95 transition-transform border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
               <div className="bg-primary text-white p-2 md:p-3 rounded-lg w-fit mb-3 border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)]">
                 <span className="material-symbols-outlined text-xl md:text-2xl">mail</span>
               </div>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
               <p className="text-slate-600 font-bold text-xs md:text-sm mb-3">For partnerships & queries</p>
               <div className="text-secondary font-black hover:underline flex items-center gap-1 text-sm break-all">
                 thceknpy@gmail.com
-                <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+                <span className="material-symbols-outlined text-base transition-transform md:group-hover:translate-x-1">arrow_forward</span>
               </div>
             </div>
           </a>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
               <p className="text-slate-600 font-bold text-xs md:text-sm mb-3">Summaya Sainu</p>
               <div className="text-[#bc1888] font-black hover:underline flex items-center gap-1 text-base md:text-lg">
                 Chat on WhatsApp
-                <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+                <span className="material-symbols-outlined text-base transition-transform md:group-hover:translate-x-1">arrow_forward</span>
               </div>
             </div>
           </a>
@@ -72,11 +72,11 @@ const Footer: React.FC = () => {
             href="https://linktr.ee/rsreehari.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 mt-4 hover:scale-105 transition-transform duration-300"
+            className="group inline-flex items-center gap-2 mt-4 md:hover:scale-105 active:scale-95 transition-transform duration-300"
           >
             <span className="text-white/60 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
             <div className="relative">
-              <span className="font-script text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-300 to-yellow-400 group-hover:from-yellow-400 group-hover:via-cyan-300 group-hover:to-white transition-all duration-500 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.5)] pb-1 block transform -rotate-2 group-hover:rotate-0 filter brightness-110">
+              <span className="font-script text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-300 to-yellow-400 md:group-hover:from-yellow-400 md:group-hover:via-cyan-300 md:group-hover:to-white active:from-yellow-400 active:via-cyan-300 active:to-white transition-all duration-500 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.5)] pb-1 block transform -rotate-2 md:group-hover:rotate-0 active:rotate-0 filter brightness-110">
                 Sreehari
               </span>
               <svg className="absolute w-[120%] h-4 -bottom-3 -left-2 text-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-wrap justify-center md:justify-end gap-3">
           {/* Social Buttons */}
-          <a href="https://www.instagram.com/wit.thceknpy" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#cc2366] transition-all group border border-white/10 hover:border-transparent flex items-center gap-2" title="WiT Instagram">
+          <a href="https://www.instagram.com/wit.thceknpy" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white/5 md:hover:bg-gradient-to-tr md:hover:from-[#f09433] md:hover:via-[#bc1888] md:hover:to-[#cc2366] active:bg-gradient-to-tr active:from-[#f09433] active:via-[#bc1888] active:to-[#cc2366] transition-all group border border-white/10 md:hover:border-transparent active:border-transparent flex items-center gap-2" title="WiT Instagram">
             <span className="material-symbols-outlined text-lg group-hover:text-white text-white/80">linked_camera</span>
             <span className="text-xs font-bold text-white/80 group-hover:text-white">WiT Insta</span>
           </a>

@@ -80,7 +80,7 @@ const Timeline: React.FC = () => {
                 >
                   <div
                     onClick={() => idx === events.length - 1 && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
-                    className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group cursor-pointer`}
+                    className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] md:hover:-translate-y-1 active:scale-95 transition-transform duration-300 relative group cursor-pointer`}
                   >
 
                     {event.day && (
@@ -115,10 +115,10 @@ const Timeline: React.FC = () => {
           <p className="text-lg md:text-xl font-bold text-black/80 mb-8 max-w-lg mx-auto">Don't miss South India's largest women-centric hackathon.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-transparent">
+            <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl shadow-[4px_4px_0px_#fff] md:hover:translate-x-[2px] md:hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all border-2 border-transparent">
               REGISTER NOW
             </a>
-            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl border-4 border-black hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl border-4 border-black md:hover:bg-slate-50 active:bg-slate-200 transition-all flex items-center justify-center gap-2">
               <span className="material-symbols-outlined">download</span>
               VIEW GUIDE
             </a>

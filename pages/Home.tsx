@@ -58,7 +58,7 @@ const Home: React.FC = () => {
                 }}
                 className="relative mt-8 mb-4 md:absolute md:-right-44 md:-top-32 md:mt-0 z-50 block w-auto"
               >
-                <div className="bg-white !text-black font-black uppercase text-xs md:text-base px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform hover:scale-110 active:scale-95 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
+                <div className="bg-white !text-black font-black uppercase text-xs md:text-base px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform md:hover:scale-110 active:scale-95 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
                   <svg className="w-5 h-5 md:w-6 md:h-6 text-primary fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
               href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-secondary text-lg md:text-2xl font-black px-8 py-4 md:px-12 md:py-6 rounded-2xl shadow-[6px_6px_0px_rgba(255,20,147,1)] md:shadow-[8px_8px_0px_rgba(255,20,147,1)] hover:shadow-[4px_4px_0px_rgba(255,20,147,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all inline-flex items-center gap-2 md:gap-3 border-2 border-transparent hover:border-white"
+              className="bg-white text-secondary text-lg md:text-2xl font-black px-8 py-4 md:px-12 md:py-6 rounded-2xl shadow-[6px_6px_0px_rgba(255,20,147,1)] md:shadow-[8px_8px_0px_rgba(255,20,147,1)] md:hover:shadow-[4px_4px_0px_rgba(255,20,147,1)] md:hover:translate-x-[2px] md:hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all inline-flex items-center gap-2 md:gap-3 border-2 border-transparent hover:border-white"
             >
               REGISTER NOW
               <span className="material-symbols-outlined text-2xl md:text-3xl font-bold">arrow_outward</span>
@@ -102,20 +102,20 @@ const Home: React.FC = () => {
       <section className="bg-white py-16 md:py-24 px-4 md:px-6 relative">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
           {/* Card 1 */}
-          <div className="col-span-1 md:col-span-2 bg-secondary/5 border-2 border-secondary/10 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden group hover:bg-secondary hover:text-white transition-colors duration-500">
+          <div className="col-span-1 md:col-span-2 bg-secondary/5 border-2 border-secondary/10 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden group md:hover:bg-secondary md:hover:text-white transition-colors duration-500">
             <div className="relative z-10 space-y-4 md:space-y-6">
-              <h3 className="text-3xl md:text-6xl font-bold leading-tight group-hover:text-white text-secondary">
+              <h3 className="text-3xl md:text-6xl font-bold leading-tight md:group-hover:text-white text-secondary">
                 Break the <br />
-                <span className="font-script text-primary text-4xl md:text-7xl group-hover:text-yellow-300 transition-colors">bias</span>
+                <span className="font-script text-primary text-4xl md:text-7xl md:group-hover:text-yellow-300 transition-colors">bias</span>
               </h3>
-              <p className="text-base md:text-xl text-slate-600 font-body leading-relaxed group-hover:text-white/90 max-w-lg">
+              <p className="text-base md:text-xl text-slate-600 font-body leading-relaxed md:group-hover:text-white/90 max-w-lg">
                 Tink-Her-Hack 4.0 consists of an 18-hour intense coding session overnight. It’s an opportunity to network with mentors, learn new technologies, and build cool projects.
               </p>
             </div>
             <img
               src="/women.jpg"
               alt="Women in Tech"
-              className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 w-40 h-40 md:w-64 md:h-64 object-cover rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500 grayscale group-hover:grayscale-0"
+              className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 w-40 h-40 md:w-64 md:h-64 object-cover rounded-full opacity-20 md:group-hover:opacity-40 transition-opacity duration-500 grayscale md:group-hover:grayscale-0"
             />
           </div>
 
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
             "/photos/photo6.jpg",
             "/photos/photo7.jpg"
           ].map((src, i) => (
-            <div key={i} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform hover:rotate-0 transition-transform duration-300 hover:scale-105 shadow-lg md:shadow-2xl shrink-0">
+            <div key={i} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform md:hover:rotate-0 transition-transform duration-300 md:hover:scale-105 active:scale-95 shadow-lg md:shadow-2xl shrink-0">
               <img
                 src={src}
                 alt={`Memory ${i + 1}`}

@@ -50,14 +50,15 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="group bg-white border-4 border-black rounded-[2rem] p-8 flex flex-col hover:shadow-[8px_8px_0px_#FF1493] transition-all duration-300 relative overflow-hidden h-full"
+              whileHover={{ y: typeof window !== 'undefined' && window.innerWidth > 768 ? -5 : 0 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-white border-4 border-black rounded-[2rem] p-8 flex flex-col md:hover:shadow-[8px_8px_0px_#FF1493] active:shadow-none transition-all duration-300 relative overflow-hidden h-full"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-yellow-300 rounded-2xl flex items-center justify-center border-2 border-black group-hover:rotate-12 transition-transform">
+                <div className="w-14 h-14 bg-yellow-300 rounded-2xl flex items-center justify-center border-2 border-black md:group-hover:rotate-12 transition-transform">
                   <span className="material-symbols-outlined text-3xl text-black">{project.icon}</span>
                 </div>
-                <span className="material-symbols-outlined text-3xl text-slate-300 group-hover:text-black transition-colors -rotate-45 group-hover:rotate-0">arrow_forward</span>
+                <span className="material-symbols-outlined text-3xl text-slate-300 md:group-hover:text-black transition-colors -rotate-45 md:group-hover:rotate-0">arrow_forward</span>
               </div>
 
               <h3 className="text-2xl font-black text-slate-900 mb-3 uppercase leading-tight">{project.title}</h3>
@@ -72,7 +73,7 @@ const Projects: React.FC = () => {
             <div className="relative z-10 space-y-6">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">Be part of the <br /><span className="font-script text-yellow-300">next legacy</span></h2>
 
-              <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-black text-lg md:text-xl font-bold px-8 py-4 rounded-xl shadow-[6px_6px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_#000] transition-all border-2 border-black mt-4">
+              <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-black text-lg md:text-xl font-bold px-8 py-4 rounded-xl shadow-[6px_6px_0px_#000] md:hover:translate-x-[2px] md:hover:translate-y-[2px] md:hover:shadow-[3px_3px_0px_#000] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all border-2 border-black mt-4">
                 REGISTER NOW
               </a>
             </div>

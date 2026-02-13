@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
           <img
             src="/tink-her-hack.png"
             alt="Tink-Her-Hack 4.0 Logo"
-            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform"
+            className="w-10 h-10 object-contain md:group-hover:scale-110 transition-transform"
           />
           <span className="text-xl font-bold tracking-tight text-white">Tink-Her-Hack <span className="text-primary">4.0</span></span>
         </button>
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-primary relative group ${activeSection === link.id ? 'text-primary' : 'text-white/90 hover:text-white'}`}
+              className={`text-sm font-bold uppercase tracking-wider transition-colors md:hover:text-primary relative group ${activeSection === link.id ? 'text-primary' : 'text-white/90 md:hover:text-white'}`}
             >
               {link.name}
               {activeSection === link.id && (
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
+            className="hidden sm:block bg-primary md:hover:bg-primary/90 active:bg-primary/80 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
           >
             Register Now
           </motion.a>
