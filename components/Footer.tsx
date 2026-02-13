@@ -68,9 +68,9 @@ const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 border-t border-white/10 pt-10">
         <div className="flex flex-col items-center md:items-start gap-1">
           <span className="text-sm font-medium text-white/70">© 2026 TinkerHub CE Karunagappally</span>
-          <span className="text-white/60 font-medium flex items-center gap-1.5 transition-all hover:text-white">
+          <span className="text-white font-bold flex items-center gap-1.5 transition-all text-base tracking-wide mt-1">
             Crafted by
-            <a href="https://github.com/rsreehari" target="_blank" rel="noopener noreferrer" className="font-script text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-primary hover:to-white transition-all transform hover:scale-110 inline-block px-1">
+            <a href="https://github.com/rsreehari" target="_blank" rel="noopener noreferrer" className="font-script text-2xl md:text-3xl text-yellow-300 hover:text-white transition-colors transform hover:scale-110 inline-block px-1 drop-shadow-md">
               Sreehari
             </a>
           </span>
