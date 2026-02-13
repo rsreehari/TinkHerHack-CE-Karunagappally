@@ -72,11 +72,13 @@ const Footer: React.FC = () => {
             href="https://github.com/rsreehari"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-3 px-6 py-2 mt-3 rounded-full bg-black/40 border border-white/10 hover:border-primary/50 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,20,147,0.4)] overflow-hidden"
+            className="group relative inline-flex p-[2px] mt-3 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-            <span className="text-white/70 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
-            <span className="font-script text-2xl text-primary group-hover:text-pink-300 transition-colors pb-1 drop-shadow-sm">R Sreehari</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse"></div>
+            <div className="relative px-6 py-2 bg-black rounded-full flex items-center gap-2">
+              <span className="text-white/70 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
+              <span className="font-script text-2xl text-cyan-400 group-hover:text-cyan-300 transition-colors pb-1 drop-shadow-sm">R Sreehari</span>
+            </div>
           </a>
         </div>
 
