@@ -59,7 +59,9 @@ const Home: React.FC = () => {
                 className="relative mt-8 mb-4 md:absolute md:-right-44 md:-top-32 md:mt-0 z-50 block w-auto"
               >
                 <div className="bg-white !text-black font-black uppercase text-xs md:text-base px-4 py-2 md:px-6 md:py-3 shadow-[4px_4px_0px_#FF1493] md:shadow-[8px_8px_0px_#FF1493] border-2 md:border-4 border-black transform hover:scale-110 active:scale-95 transition-transform cursor-pointer whitespace-nowrap flex items-center gap-2 !leading-none !tracking-normal">
-                  <span className="material-symbols-outlined text-base md:text-xl text-primary">verified</span>
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-primary fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
                   Beginner Friendly!
                 </div>
               </motion.div>
@@ -155,8 +157,14 @@ const Home: React.FC = () => {
             "/photos/photo6.jpg",
             "/photos/photo7.jpg"
           ].map((src, i) => (
-            <div key={i} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform hover:rotate-0 transition-all duration-300 hover:scale-105 shadow-lg md:shadow-2xl shrink-0">
-              <img src={src} className="w-full h-full object-cover" loading="lazy" />
+            <div key={i} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform hover:rotate-0 transition-transform duration-300 hover:scale-105 shadow-lg md:shadow-2xl shrink-0">
+              <img
+                src={src}
+                alt={`Memory ${i + 1}`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>

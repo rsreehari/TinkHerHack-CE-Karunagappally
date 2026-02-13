@@ -1,5 +1,6 @@
 
 import React, { useRef } from 'react';
+import confetti from 'canvas-confetti';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Timeline: React.FC = () => {
@@ -40,11 +41,11 @@ const Timeline: React.FC = () => {
       </section>
 
       {/* Vertical Timeline Section */}
-      <section className="relative w-full pb-24 px-4 md:px-0 bg-slate-50 border-y-4 border-black" ref={containerRef}>
+      <section className="relative w-full pb-24 px-4 md:px-0 bg-slate-50 border-y-4 border-black overflow-hidden" ref={containerRef}>
         <div className="max-w-4xl mx-auto relative pt-12 md:pt-20">
 
-          {/* Vertical Central Line Wrapper */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-slate-200 transform md:-translate-x-1/2 z-0 rounded-full overflow-hidden">
+          {/* Vertical Central Line Wrapper - Fixed Alignment */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-2 bg-slate-200 transform -translate-x-1/2 z-0 rounded-full overflow-hidden">
             {/* Dynamic Line Fill */}
             <motion.div
               style={{ height: lineHeight }}
@@ -54,20 +55,27 @@ const Timeline: React.FC = () => {
 
           <div className="flex flex-col gap-12 relative z-10 pb-12">
             {events.map((event, idx) => (
-              <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+              <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''} relative`}>
 
-                {/* Desktop: Spacer to push content to one side */}
+                {/* Desktop: Spacer */}
                 <div className="hidden md:block w-1/2"></div>
 
                 {/* Timeline Dot */}
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 transition-all duration-300 ${event.active ? 'bg-primary' : 'bg-white'}`}
+                  initial={{ scale: 0, backgroundColor: "#fff" }}
+                  whileInView={{ scale: 1, backgroundColor: "#FF1493" }}
+                  viewport={{ once: true, margin: "-40% 0px -40% 0px" }}
+                  transition={{ duration: 0.4 }}
+                  onClick={() => idx === events.length - 1 && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
+                  className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-black z-20 cursor-pointer hover:scale-110 shadow-lg`}
                 >
                   {event.active && <div className="absolute -inset-2 rounded-full border-2 border-primary animate-ping opacity-20"></div>}
                 </motion.div>
+
+                {/* Line Mask for Last Item */}
+                {idx === events.length - 1 && (
+                  <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 top-1/2 w-4 md:w-6 h-[1000px] bg-slate-50 z-10 pointer-events-none" />
+                )}
 
                 {/* Content Card */}
                 <motion.div
@@ -77,7 +85,10 @@ const Timeline: React.FC = () => {
                   transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
                   className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}
                 >
-                  <div className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group`}>
+                  <div
+                    onClick={() => idx === events.length - 1 && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
+                    className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] hover:-translate-y-1 transition-transform duration-300 relative group cursor-pointer`}
+                  >
 
                     {event.day && (
                       <span className={`absolute -top-3 ${idx % 2 === 0 ? 'right-4 md:left-4 md:right-auto' : 'right-4'} bg-yellow-300 text-black border-2 border-black px-3 py-1 text-[10px] md:text-xs font-bold uppercase rounded-full`}>

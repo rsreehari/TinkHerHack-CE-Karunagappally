@@ -72,12 +72,16 @@ const Footer: React.FC = () => {
             href="https://linktr.ee/rsreehari.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex p-[2px] mt-3 rounded-full overflow-hidden hover:scale-105 transition-transform duration-300"
+            className="group inline-flex items-center gap-2 mt-4 hover:scale-105 transition-transform duration-300"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse"></div>
-            <div className="relative px-6 py-2 bg-black rounded-full flex items-center gap-2">
-              <span className="text-white/70 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
-              <span className="font-script text-2xl text-cyan-400 group-hover:text-cyan-300 transition-colors pb-1 drop-shadow-sm">R Sreehari</span>
+            <span className="text-white/60 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">Crafted by</span>
+            <div className="relative">
+              <span className="font-script text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-300 group-hover:from-yellow-300 group-hover:via-cyan-300 group-hover:to-pink-300 transition-all duration-500 drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] pb-1 block transform -rotate-2 group-hover:rotate-0">
+                Sreehari
+              </span>
+              <svg className="absolute w-[110%] h-3 -bottom-2 -left-1 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+              </svg>
             </div>
           </a>
         </div>
