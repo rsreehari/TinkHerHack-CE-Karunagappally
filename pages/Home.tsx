@@ -147,26 +147,33 @@ const Home: React.FC = () => {
         </div>
 
         {/* Marquee - Optimized for responsive scrolling */}
-        <div className="flex animate-marquee gap-4 md:gap-8 w-max pl-4 md:pl-6">
-          {[
-            "/photos/photo1.jpg",
-            "/photos/photo2.jpg",
-            "/photos/photo3.jpg",
-            "/photos/photo4.jpg",
-            "/photos/photo5.jpg",
-            "/photos/photo6.jpg",
-            "/photos/photo7.jpg"
-          ].map((src, i) => (
-            <div key={i} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform md:hover:rotate-0 transition-transform duration-300 md:hover:scale-105 active:scale-95 shadow-lg md:shadow-2xl shrink-0">
-              <img
-                src={src}
-                alt={`Memory ${i + 1}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
+        {/* Marquee - Optimized for responsive scrolling */}
+        <div className="flex w-full overflow-hidden">
+          <div className="flex animate-marquee gap-4 md:gap-8 w-max pl-4 md:pl-6">
+            {[...Array(2)].map((_, setIndex) => (
+              <React.Fragment key={setIndex}>
+                {[
+                  "/photos/photo1.jpg",
+                  "/photos/photo2.jpg",
+                  "/photos/photo3.jpg",
+                  "/photos/photo4.jpg",
+                  "/photos/photo5.jpg",
+                  "/photos/photo6.jpg",
+                  "/photos/photo7.jpg"
+                ].map((src, i) => (
+                  <div key={`${setIndex}-${i}`} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform md:hover:rotate-0 transition-transform duration-300 md:hover:scale-105 active:scale-95 shadow-lg md:shadow-2xl shrink-0 backface-hidden">
+                    <img
+                      src={src}
+                      alt={`Memory ${i + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </section>
     </div>

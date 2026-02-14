@@ -83,47 +83,12 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden sm:block bg-primary md:hover:bg-primary/90 active:bg-primary/80 text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
+            className="bg-primary md:hover:bg-primary/90 active:bg-primary/80 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-lg font-bold text-xs md:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
           >
             Register Now
           </motion.a>
-
-          {/* Mobile Toggle */}
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <span className="material-symbols-outlined">{isOpen ? 'close' : 'menu'}</span>
-          </button>
         </div>
       </div>
-
-      {/* Mobile Nav */}
-      <motion.div
-        initial={false}
-        animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-        className="md:hidden bg-background-dark border-b border-white/10 overflow-hidden"
-      >
-        <div className="p-6 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => scrollToSection(link.id)}
-              className={`text-lg font-bold uppercase tracking-wider text-left ${activeSection === link.id ? 'text-primary' : 'text-white/90'}`}
-            >
-              {link.name}
-            </button>
-          ))}
-          <a
-            href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full bg-primary py-3 rounded-lg font-bold text-center block text-white mt-4"
-          >
-            Register Now
-          </a>
-        </div>
-      </motion.div>
     </motion.header>
   );
 };
