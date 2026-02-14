@@ -3,23 +3,27 @@ import CountdownTimer from '../components/CountdownTimer';
 import { motion } from 'framer-motion';
 
 // No physics engine needed - using Framer Motion for stable floating effect
-const FloatingShape: React.FC<{ delay: number; type: string }> = ({ delay, type }) => {
-  // Generate random properties for more organic feel
-  const randomDuration = 15 + Math.random() * 10;
-  const randomXStart = Math.random() * 100;
-  const randomScale = 0.5 + Math.random() * 0.5;
+// No physics engine needed - using Framer Motion for stable floating effect
+const FloatingShape: React.FC<{ delay: number; type: string; initialX: number }> = ({ delay, type, initialX }) => {
+  // Generate stable random properties using useMemo
+  const { duration, xDrift, scale, rotation } = React.useMemo(() => ({
+    duration: 15 + Math.random() * 10,
+    xDrift: Math.random() * 10 - 5,
+    scale: 0.5 + Math.random() * 0.5,
+    rotation: Math.random() > 0.5 ? 360 : -360
+  }), []);
 
   return (
     <motion.div
-      initial={{ y: "110vh", x: `${randomXStart}vw`, opacity: 0, scale: randomScale, rotate: 0 }}
+      initial={{ y: "110vh", x: `${initialX}%`, opacity: 0, scale: scale, rotate: 0 }}
       animate={{
         y: "-10vh",
         opacity: [0, 0.8, 0.8, 0],
-        rotate: [0, 180, 360],
-        x: [`${randomXStart}vw`, `${randomXStart + (Math.random() * 10 - 5)}vw`]
+        rotate: [0, 180, rotation],
+        x: [`${initialX}%`, `${initialX + xDrift}%`]
       }}
       transition={{
-        duration: randomDuration,
+        duration: duration,
         repeat: Infinity,
         delay: delay,
         ease: "linear"
@@ -41,9 +45,9 @@ const FloatingShape: React.FC<{ delay: number; type: string }> = ({ delay, type 
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col w-full overflow-hidden font-display">
+    <div className="flex flex-col w-full overflow-x-hidden font-display">
       {/* HERO SECTION - Valentines Theme */}
-      <section className="relative w-full h-screen bg-secondary overflow-hidden flex flex-col items-center justify-center text-center">
+      <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-center text-center py-20">
         {/* Floating Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
@@ -51,6 +55,8 @@ const Home: React.FC = () => {
               key={i}
               delay={Math.random() * 20}
               type={Math.random() > 0.6 ? 'heart' : Math.random() > 0.5 ? 'circle' : 'diamond'}
+              // Distribute evenly across the width (0% to 100%) with a slight jitter
+              initialX={(i * 5) + (Math.random() * 4 - 2)}
             />
           ))}
         </div>
@@ -68,7 +74,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           {/* Main Title - Responsive sizing */}
-          <h1 className="text-6xl sm:text-7xl md:text-9xl font-black text-white leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)]">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)]">
             <motion.span
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
