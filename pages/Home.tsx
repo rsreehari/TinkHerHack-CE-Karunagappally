@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full overflow-x-hidden font-display">
       {/* HERO SECTION - Valentines Theme */}
-      <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-start pt-28 pb-10 md:justify-center md:pt-0 md:pb-20 text-center">
+      <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-start pt-12 pb-10 md:justify-center md:pt-0 md:pb-20 text-center">
         {/* Floating Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Create two layers of shapes for depth: slow back layer, fast front layer */}
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-start w-full px-4 pointer-events-none select-none h-full">
 
           {/* Top Group: Badge, Title, Subtitle */}
-          <div className="flex flex-col items-center space-y-2 md:space-y-8 w-full">
+          <div className="flex flex-col items-center space-y-4 md:space-y-8 w-full">
             {/* Badge */}
             <motion.div
               initial={{ scale: 0 }}

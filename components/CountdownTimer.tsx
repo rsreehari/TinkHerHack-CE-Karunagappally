@@ -40,15 +40,13 @@ const CountdownTimer: React.FC = () => {
         return () => clearTimeout(timer);
     });
 
-    const timerComponents = Object.keys(timeLeft).map((interval) => {
-        if (!timeLeft[interval as keyof TimeLeft] && interval !== 'seconds' && interval !== 'minutes') {
-            return null;
-        }
+    const intervals: (keyof TimeLeft)[] = ['days', 'hours', 'minutes', 'seconds'];
 
+    const timerComponents = intervals.map((interval) => {
         return (
             <div key={interval} className="flex flex-col items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl px-3 py-3 min-w-[72px] md:p-3 md:min-w-[80px]">
                 <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-display">
-                    {timeLeft[interval as keyof TimeLeft].toString().padStart(2, '0')}
+                    {timeLeft[interval].toString().padStart(2, '0')}
                 </span>
                 <span className="text-xs md:text-xs text-slate-400 uppercase tracking-wider">{interval}</span>
             </div>
