@@ -47,14 +47,14 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md"
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <button onClick={() => scrollToSection('home')} className="flex items-center gap-3 group">
+      <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
+        <button onClick={() => scrollToSection('home')} className="flex items-center gap-2 md:gap-3 group">
           <img
             src="/tink-her-hack.png"
             alt="Tink-Her-Hack 4.0 Logo"
-            className="w-10 h-10 object-contain md:group-hover:scale-110 transition-transform"
+            className="w-8 h-8 md:w-10 md:h-10 object-contain md:group-hover:scale-110 transition-transform"
           />
-          <span className="text-xl font-bold tracking-tight text-white">Tink-Her-Hack <span className="text-primary">4.0</span></span>
+          <span className="text-sm md:text-xl font-bold tracking-tight text-white">Tink-Her-Hack <span className="text-primary">4.0</span></span>
         </button>
 
         {/* Desktop Nav */}
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary md:hover:bg-primary/90 active:bg-primary/80 text-white px-4 py-2 md:px-6 md:py-2.5 rounded-lg font-bold text-xs md:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)]"
+            className="bg-primary md:hover:bg-primary/90 active:bg-primary/80 text-white px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg font-bold text-[10px] md:text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(255,20,146,0.3)] whitespace-nowrap"
           >
             Register Now
           </motion.a>

@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full overflow-x-hidden font-display">
       {/* HERO SECTION - Valentines Theme */}
-      <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-center text-center py-20">
+      <section className="relative w-full h-auto md:min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-start pt-24 pb-20 md:justify-center md:pt-0 md:pb-20 text-center">
         {/* Floating Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Create two layers of shapes for depth: slow back layer, fast front layer */}
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto space-y-6 md:space-y-8 w-full px-4 pointer-events-none select-none">
+        <div className="relative z-10 max-w-7xl mx-auto space-y-4 md:space-y-8 w-full px-4 pointer-events-none select-none">
           {/* Badge */}
           <motion.div
             initial={{ scale: 0 }}
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           {/* Main Title - Responsive sizing */}
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)]">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none md:leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)]">
             <motion.span
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -100,14 +100,14 @@ const Home: React.FC = () => {
           </h1>
 
           {/* Subtitle with Script Font */}
-          <div className="text-xl md:text-4xl text-white font-medium mt-8 md:mt-4 relative inline-block max-w-[90%] mx-auto leading-normal drop-shadow-md">
+          <div className="text-lg md:text-4xl text-white font-medium mt-4 md:mt-4 relative inline-block max-w-[90%] mx-auto leading-normal drop-shadow-md">
             Made for <span className="font-script text-3xl md:text-6xl text-yellow-300 relative z-10 mx-1 md:mx-2 transform -rotate-3 inline-block">women</span> who build.
             <svg className="absolute w-[110%] h-3 md:h-4 -bottom-1 md:-bottom-2 -left-[5%] text-primary opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
             </svg>
           </div>
 
-          <div className="pt-8 md:pt-12 pb-8 pointer-events-auto">
+          <div className="pt-4 md:pt-12 pb-6 md:pb-8 pointer-events-auto">
             <CountdownTimer />
           </div>
 
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
               href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-secondary text-lg md:text-2xl font-black px-8 py-4 md:px-12 md:py-6 rounded-2xl shadow-[6px_6px_0px_rgba(255,20,147,1)] md:shadow-[8px_8px_0px_rgba(255,20,147,1)] md:hover:shadow-[4px_4px_0px_rgba(255,20,147,1)] md:hover:translate-x-[2px] md:hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all inline-flex items-center gap-2 md:gap-3 border-2 border-transparent hover:border-white z-50 relative"
+              className="bg-white text-secondary text-sm md:text-2xl font-black px-6 py-3 md:px-12 md:py-6 rounded-xl md:rounded-2xl shadow-[4px_4px_0px_rgba(255,20,147,1)] md:shadow-[8px_8px_0px_rgba(255,20,147,1)] md:hover:shadow-[4px_4px_0px_rgba(255,20,147,1)] md:hover:translate-x-[2px] md:hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all inline-flex items-center gap-2 md:gap-3 border-2 border-transparent hover:border-white z-50 relative"
             >
               REGISTER NOW
               <span className="material-symbols-outlined text-2xl md:text-3xl font-bold">arrow_outward</span>
@@ -184,13 +184,13 @@ const Home: React.FC = () => {
             {[...Array(2)].map((_, setIndex) => (
               <React.Fragment key={setIndex}>
                 {[
-                  "/photos/photo1.jpg",
-                  "/photos/photo2.jpg",
-                  "/photos/photo3.jpg",
-                  "/photos/photo4.jpg",
-                  "/photos/photo5.jpg",
-                  "/photos/photo6.jpg",
-                  "/photos/photo7.jpg"
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo1.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo2.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo3.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo4.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo5.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo6.jpg",
+                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo7.jpg"
                 ].map((src, i) => (
                   <div key={`${setIndex}-${i}`} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform md:hover:rotate-0 transition-transform duration-300 md:hover:scale-105 active:scale-95 shadow-lg md:shadow-2xl shrink-0 backface-hidden">
                     <img
