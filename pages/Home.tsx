@@ -50,7 +50,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full overflow-x-hidden font-display">
       {/* HERO SECTION - Valentines Theme */}
-      <section className="relative w-full h-auto md:min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-start pt-24 pb-20 md:justify-center md:pt-0 md:pb-20 text-center">
+      <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-start pt-28 pb-10 md:justify-center md:pt-0 md:pb-20 text-center">
         {/* Floating Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Create two layers of shapes for depth: slow back layer, fast front layer */}
@@ -65,52 +65,57 @@ const Home: React.FC = () => {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto space-y-4 md:space-y-8 w-full px-4 pointer-events-none select-none">
-          {/* Badge */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="inline-block pointer-events-auto"
-          >
-            <span className="bg-white/10 border border-white/20 backdrop-blur-md text-white px-4 py-1.5 md:px-6 md:py-2 rounded-full font-bold tracking-widest uppercase text-[10px] md:text-sm shadow-xl hover:bg-white/20 transition-colors">
-              Feb 20-21 • CE Karunagappally
-            </span>
-          </motion.div>
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-start w-full px-4 pointer-events-none select-none h-full">
 
-          {/* Main Title - Responsive sizing */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white leading-none md:leading-[0.9] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)]">
-            <motion.span
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="block"
+          {/* Top Group: Badge, Title, Subtitle */}
+          <div className="flex flex-col items-center space-y-2 md:space-y-8 w-full">
+            {/* Badge */}
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              className="inline-block pointer-events-auto"
             >
-              Tink-Her
-            </motion.span>
-            <span className="relative inline-block w-full flex flex-col items-center md:block md:w-auto">
+              <span className="bg-white/10 border border-white/20 backdrop-blur-md text-white px-5 py-2 md:px-6 md:py-2 rounded-full font-bold tracking-widest uppercase text-xs sm:text-sm md:text-sm shadow-xl hover:bg-white/20 transition-colors">
+                Feb 20-21 • CE Karunagappally
+              </span>
+            </motion.div>
+
+            {/* Main Title - Responsive sizing */}
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tighter uppercase relative flex flex-col items-center drop-shadow-[0_4px_0_rgba(0,0,0,0.3)] mt-2">
               <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-300"
+                transition={{ duration: 0.8 }}
+                className="block"
               >
-                Hack 4.0
+                Tink-Her
               </motion.span>
-            </span>
-          </h1>
+              <span className="relative inline-block w-full flex flex-col items-center md:block md:w-auto">
+                <motion.span
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-300"
+                >
+                  Hack 4.0
+                </motion.span>
+              </span>
+            </h1>
 
-          {/* Subtitle with Script Font */}
-          <div className="text-lg md:text-4xl text-white font-medium mt-4 md:mt-4 relative inline-block max-w-[90%] mx-auto leading-normal drop-shadow-md">
-            Made for <span className="font-script text-3xl md:text-6xl text-yellow-300 relative z-10 mx-1 md:mx-2 transform -rotate-3 inline-block">women</span> who build.
-            <svg className="absolute w-[110%] h-3 md:h-4 -bottom-1 md:-bottom-2 -left-[5%] text-primary opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
-              <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
-            </svg>
+            {/* Subtitle with Script Font */}
+            <div className="text-lg md:text-4xl text-white font-medium mt-1 md:mt-4 relative inline-block max-w-[90%] mx-auto leading-normal drop-shadow-md">
+              Made for <span className="font-script text-3xl md:text-6xl text-yellow-300 relative z-10 mx-1 md:mx-2 transform -rotate-3 inline-block">women</span> who build.
+              <svg className="absolute w-[110%] h-3 md:h-4 -bottom-1 md:-bottom-2 -left-[5%] text-primary opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
+              </svg>
+            </div>
           </div>
 
-          <div className="pt-4 md:pt-12 pb-6 md:pb-8 pointer-events-auto">
+          <div className="pt-12 pb-12 md:pt-12 md:pb-12 pointer-events-auto">
             <CountdownTimer />
           </div>
 
+          {/* Bottom Anchor: Register Button */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
