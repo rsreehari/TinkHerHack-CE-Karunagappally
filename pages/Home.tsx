@@ -7,25 +7,28 @@ import { motion } from 'framer-motion';
 const FloatingShape: React.FC<{ delay: number; type: string; initialX: number }> = ({ delay, type, initialX }) => {
   // Generate stable random properties using useMemo
   const { duration, xDrift, scale, rotation } = React.useMemo(() => ({
-    duration: 15 + Math.random() * 10,
-    xDrift: Math.random() * 10 - 5,
-    scale: 0.5 + Math.random() * 0.5,
+    duration: 15 + Math.random() * 15, // Slower, more varying speed
+    xDrift: (Math.random() - 0.5) * 200, // Drift in pixels (not %) to be consistent
+    scale: 0.3 + Math.random() * 0.5,
     rotation: Math.random() > 0.5 ? 360 : -360
   }), []);
 
   return (
     <motion.div
-      initial={{ y: "110vh", x: `${initialX}%`, opacity: 0, scale: scale, rotate: 0 }}
+      // Use 'left' for absolute positioning across the screen width
+      style={{ left: `${initialX}%` }}
+      initial={{ y: "110vh", x: 0, opacity: 0, scale: scale, rotate: 0 }}
       animate={{
         y: "-10vh",
-        opacity: [0, 0.8, 0.8, 0],
+        opacity: [0, 1, 1, 0], // Fate in/out smoother
         rotate: [0, 180, rotation],
-        x: [`${initialX}%`, `${initialX + xDrift}%`]
+        x: [0, xDrift] // Drift relative to the 'left' position
       }}
       transition={{
         duration: duration,
         repeat: Infinity,
-        delay: delay,
+        // Use negative delay to pre-warm the animation so screen is full immediately
+        delay: -Math.random() * 20,
         ease: "linear"
       }}
       className="absolute pointer-events-none z-0"
@@ -49,14 +52,15 @@ const Home: React.FC = () => {
       {/* HERO SECTION - Valentines Theme */}
       <section className="relative w-full min-h-screen bg-secondary overflow-hidden flex flex-col items-center justify-center text-center py-20">
         {/* Floating Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          {/* Create two layers of shapes for depth: slow back layer, fast front layer */}
+          {[...Array(35)].map((_, i) => (
             <FloatingShape
               key={i}
-              delay={Math.random() * 20}
+              delay={Math.random() * 25} // Spread start times more
               type={Math.random() > 0.6 ? 'heart' : Math.random() > 0.5 ? 'circle' : 'diamond'}
-              // Distribute evenly across the width (0% to 100%) with a slight jitter
-              initialX={(i * 5) + (Math.random() * 4 - 2)}
+              // Ensure full coverage from -5% to 105% to avoid empty edges
+              initialX={(i * (100 / 35)) + (Math.random() * 10 - 5)}
             />
           ))}
         </div>
