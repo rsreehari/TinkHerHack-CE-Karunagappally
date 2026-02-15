@@ -189,13 +189,13 @@ const Home: React.FC = () => {
             {[...Array(2)].map((_, setIndex) => (
               <React.Fragment key={setIndex}>
                 {[
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo1.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo2.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo3.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo4.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo5.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo6.jpg",
-                  "https://exclusive-gray-fz5njpwezb.edgeone.app/photo7.jpg"
+                  "https://i.postimg.cc/gj0MDtyf/photo1.jpg",
+                  "https://i.postimg.cc/T1HtHjQs/photo2.jpg",
+                  "https://i.postimg.cc/Rh0PRpQr/photo3.jpg",
+                  "https://i.postimg.cc/D0zCgpQ9/photo4.jpg",
+                  "https://i.postimg.cc/L50x0kv7/photo5.jpg",
+                  "https://i.postimg.cc/PJFSFbK0/photo6.jpg",
+                  "https://i.postimg.cc/C56c6CJQ/photo7.jpg"
                 ].map((src, i) => (
                   <div key={`${setIndex}-${i}`} className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] md:w-[400px] md:h-[280px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white transform md:hover:rotate-0 transition-transform duration-300 md:hover:scale-105 active:scale-95 shadow-lg md:shadow-2xl shrink-0 backface-hidden">
                     <img
