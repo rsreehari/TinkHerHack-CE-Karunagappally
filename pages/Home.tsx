@@ -47,6 +47,8 @@ const FloatingShape: React.FC<{ delay: number; type: string; initialX: number }>
 };
 
 const Home: React.FC = () => {
+  const [isPaused, setIsPaused] = React.useState(false);
+  const timeoutRef = React.useRef<NodeJS.Timeout | number | null>(null);
   return (
     <div className="flex flex-col w-full overflow-x-hidden font-display">
       {/* HERO SECTION - Valentines Theme */}
@@ -185,7 +187,31 @@ const Home: React.FC = () => {
         {/* Marquee - Optimized for responsive scrolling */}
         {/* Marquee - Optimized for responsive scrolling */}
         <div className="flex w-full overflow-hidden">
-          <div className="flex animate-marquee gap-4 md:gap-8 w-max pl-4 md:pl-6">
+          <div
+            className="flex animate-marquee gap-4 md:gap-8 w-max pl-4 md:pl-6"
+            style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+            onClick={() => {
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current as number | NodeJS.Timeout);
+              }
+              setIsPaused(true);
+              timeoutRef.current = setTimeout(() => setIsPaused(false), 1000);
+            }}
+            onMouseEnter={() => {
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current as number | NodeJS.Timeout);
+              }
+              setIsPaused(true);
+              // Auto-resume after 1 second even if still hovering
+              timeoutRef.current = setTimeout(() => setIsPaused(false), 1000);
+            }}
+            onMouseLeave={() => {
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current as number | NodeJS.Timeout);
+              }
+              setIsPaused(false);
+            }}
+          >
             {[...Array(2)].map((_, setIndex) => (
               <React.Fragment key={setIndex}>
                 {[
