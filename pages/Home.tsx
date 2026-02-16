@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="inline-block pointer-events-auto"
+              className="inline-block pointer-events-auto md:mt-8"
             >
               <span className="bg-white/10 border border-white/20 backdrop-blur-md text-white px-5 py-2 md:px-6 md:py-2 rounded-full font-bold tracking-widest uppercase text-xs sm:text-sm md:text-sm shadow-xl hover:bg-white/20 transition-colors">
                 Feb 20-21 • CE Karunagappally
