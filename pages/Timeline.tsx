@@ -121,9 +121,8 @@ const Timeline: React.FC = () => {
             <a href="https://tinkerhub.org/events/V3AFAR17E1/tink-her-hack-4.0" target="_blank" className="bg-black text-white text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl shadow-[4px_4px_0px_#fff] md:hover:translate-x-[2px] md:hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all border-2 border-transparent">
               REGISTER NOW
             </a>
-            <a href="/THH_PPT.pdf" download="TinkHerHack_Guide.pdf" className="bg-white text-black text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl border-4 border-black md:hover:bg-slate-50 active:bg-slate-200 transition-all flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined">download</span>
-              VIEW GUIDE
+            <a href="https://www.notion.so/tinkerhub-foundation/Tink-Her-Hack-by-TinkerHub-186bd5ba1a868023a9e8f05853d6334a" target="_blank" className="bg-white text-black text-lg md:text-xl font-bold px-8 py-3 md:px-10 md:py-4 rounded-xl border-4 border-black md:hover:bg-slate-50 active:bg-slate-200 transition-all flex items-center justify-center gap-2">
+              HANDBOOK
             </a>
           </div>
         </div>
