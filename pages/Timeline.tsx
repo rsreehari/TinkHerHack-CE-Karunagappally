@@ -4,15 +4,18 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const Timeline: React.FC = () => {
   const events = [
-    { time: "Now", title: "Registration Open", desc: "Secure your spot immediately! Limited seats available.", align: 'bottom', active: true },
-    { time: "05:00 PM", title: "Arrival & Registration", desc: "Venue opens. Check-in and get ready.", align: 'top', day: "Feb 20" },
-    { time: "05:30 PM", title: "Opening Ceremony", desc: "Welcome address and brief.", align: 'bottom' },
-    { time: "06:00 PM", title: "Hacking Begins", desc: "The 18-hour sprint kicks off!", align: 'top' },
-    { time: "10:00 PM", title: "Dinner & Mentoring", desc: "Refuel and get feedback.", align: 'bottom' },
-    { time: "01:00 AM", title: "Midnight Fun", desc: "Games and energy boosters.", align: 'top', day: "Feb 21" },
-    { time: "08:00 AM", title: "Breakfast", desc: "Morning recharge.", align: 'bottom' },
-    { time: "12:00 PM", title: "Hacking Ends", desc: "Stop coding! Submit projects.", align: 'top' },
-    { time: "01:00 PM", title: "Judging & Closing", desc: "Demos and winners.", align: 'bottom', icon: 'emoji_events' }
+    { time: "04:30 PM", title: "Registration & Check-in", desc: "Get verified and grab your swag!", day: "Feb 20" },
+    { time: "05:00 PM", title: "Official Inauguration", desc: "Welcome address and kickoff." },
+    { time: "05:30 PM", title: "Hackathon Briefing", desc: "Guidelines, rules, and Q&A." },
+    { time: "06:30 PM", title: "Hackathon Starts", desc: "The coding marathon begins!" },
+    { time: "08:00 PM", title: "Dinner Break", desc: "Refuel and network." },
+    { time: "10:30 PM", title: "Check-in 1", desc: "First progress update." },
+    { time: "05:30 AM", title: "Check-in 2", desc: "75% Completion Target.", day: "Feb 21" },
+    { time: "10:00 AM", title: "Project Submission", desc: "Upload your code and demos." },
+    { time: "10:30 AM", title: "Presentations", desc: "Evaluation and judging round." },
+    { time: "11:30 AM", title: "Winners Announcement", desc: "Revealing the champions!", icon: 'emoji_events' },
+    { time: "11:35 AM", title: "Award Ceremony", desc: "Closing remarks and prizes." },
+    { time: "11:55 AM", title: "Group Photo", desc: "Capturing the moment." }
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -79,7 +82,7 @@ const Timeline: React.FC = () => {
                   className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}
                 >
                   <div
-                    onClick={() => idx === events.length - 1 && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
+                    onClick={() => (idx === events.length - 1 || event.title === "Winners Announcement") && confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } })}
                     className={`bg-white border-4 border-black p-6 rounded-[2rem] shadow-[6px_6px_0px_#4169E1] md:shadow-[8px_8px_0px_#4169E1] md:hover:-translate-y-1 active:scale-95 transition-transform duration-300 relative group cursor-pointer`}
                   >
 
